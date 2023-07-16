@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: home
 title: Has Children
 nav_order: 4
 has_children: true

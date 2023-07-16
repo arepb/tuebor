@@ -13,7 +13,7 @@ nav_order: 2
 This is about page.
 
 ---
-layout: default
+layout: home
 title: Markdown kitchen sink
 nav_order: 99
 ---
