@@ -1,6 +1,6 @@
 ---
-title: Configuration
 layout: home
+title: Configuration
 nav_order: 3
 ---
 
