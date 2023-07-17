@@ -4,7 +4,7 @@ title: Home
 nav_order: 1
 ---
 
-# Tuebor
+# From Michigan, For Michigan
 
 **What is Tuebor?**
 
