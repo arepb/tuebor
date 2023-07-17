@@ -4,22 +4,25 @@ title: Home
 nav_order: 1
 ---
 
-Fee is a *bare-minimum* template to create a Jekyll site that uses the [Just the Docs] theme. You can easily set the created site to be published on [GitHub Pages] – the [README] file explains how to do that, along with other details.
+**What is Tuebor?**
 
-If [Jekyll] is installed on your computer, you can also build and preview the created site *locally*. This lets you test changes before committing them, and avoids waiting for GitHub Pages.[^1] And you will be able to deploy your local build to a different platform than GitHub Pages.
+Tuebor is a commitment to invest in at least one Michigan-based startup per year. 
 
-More specifically, the created site:
+**What is the goal of Tuebor?**
 
-- uses a gem-based approach, i.e. uses a `Gemfile` and loads the `just-the-docs` gem
-- uses the [GitHub Pages / Actions workflow] to build and publish the site on GitHub Pages
+The more Michigan leaders support Michigan founders, the more Michigan leaders we’ll have. Tuebor’s success will mean the State of Michigan will have more individual venture capital investors than anywhere else on earth.
 
-Other than that, you're free to customize sites that you create with this template, however you like. You can easily change the versions of `just-the-docs` and Jekyll it uses, as well as adding further plugins.
+**If I make the commitment, are there extra fees / costs associated with Tuebor?**
 
-[Browse our documentation][Just the Docs] to learn more about how to use this theme.
+No, Tuebor is an honor commitment. Individuals make their own investments independently; Tuebor does not make investment recommendations and is not an investment advisor. 
 
-To get started with creating a site, just click "[use this template]"!
+**How much money do I need to make per investment?**
 
-If you want to maintain your docs in the `docs` directory of an existing project repo, see [Hosting your docs from an existing project repo](https://github.com/just-the-docs/just-the-docs-template/blob/main/README.md#hosting-your-docs-from-an-existing-project-repo) in the template README.
+There is no minimum dollar amount to be a part of Tuebor, just that you commit to making at least one investment in a Michigan startup per year. An individual making an investment of $1,000 is the same to us as someone investing $1,000,000. 
+
+**How do I make the commitment?**
+
+Start now. Make an investment in a Michigan company during this calendar year and join us at Tuebor.org. 
 
 ----
 
