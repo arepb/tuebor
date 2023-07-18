@@ -30,7 +30,7 @@ There is no minimum dollar amount to be a part of Tuebor, just that you commit t
 
 Start now. Make an investment in a Michigan company during this calendar year and then [show the world](link) you've made the Tuebor honor pledge. 
 
-[Start Now {: .label }](/link)
+blue {: .label .label-blue }
 
 ----
 
