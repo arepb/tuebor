@@ -2,6 +2,7 @@
 title: How To
 layout: home
 nav_order: 3
+has_children: true
 ---
 
 # How to make the Tuebor Pledge
