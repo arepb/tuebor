@@ -6,6 +6,8 @@ nav_order: 1
 
 # From Michigan, For Michigan
 
+
+
 **What is Tuebor?**
 
 Tuebor is a commitment to invest in at least one Michigan-based startup per year. 
@@ -24,7 +26,7 @@ There is no minimum dollar amount to be a part of Tuebor, just that you commit t
 
 **How do I make the commitment?**
 
-Start now. Make an investment in a Michigan company during this calendar year and join us at Tuebor.org. 
+Start now. Make an investment in a Michigan company during this calendar year and join us. 
 
 ----
 
