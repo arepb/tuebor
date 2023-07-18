@@ -4,6 +4,6 @@ layout: home
 nav_order: 3
 ---
 
-# How to make the Tuebor Commitment
+# How to make the Tuebor Pledge
 
 Text
