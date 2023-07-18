@@ -6,8 +6,8 @@ nav_order: 3
 
 # How to make the Tuebor Pledge
 
-**1. Make an investment in a Michigan startup this year.
-2. Make another one next year.**
+**1. Make an investment in a Michigan startup this year.**
+**2. Make another one next year.**
 
 ---
 
@@ -23,5 +23,5 @@ Here's what you do:
 
 Note: Finally, to make sure this new 'job' isn't the first listing in order on your profile, you can drag it up and down by first clicking the pencil icon ✎ and then use the up-down arrow symbol ↕ which looks like this:
 
-<img src="/assets/images/linkedin-arrow.png" width="548" height="384">
+![](/assets/images/linkedin-arrow.png)
 ```
