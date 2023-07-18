@@ -11,4 +11,4 @@ nav_order: 3
 **2. Make another one next year.**
 
 <br/> 
-Ready to make your pledge public. [Follow these instructions](howto/makepublic.html).
+Ready to make your pledge public? [Follow these instructions](howto/makepublic.html).
