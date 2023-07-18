@@ -19,7 +19,7 @@ Here's what you do:
 
 ![](/assets/images/linkedin-post.png)
 
-Note: Finally, to make sure this new 'job' isn't the first listing in order on your profile, you can drag it up and down using the carrot symbol which looks like this:
+Note: Finally, to make sure this new 'job' isn't the first listing in order on your profile, you can drag it up and down by first clicking the pencil icon ✎ and then use the up-down arrow symbol ↕ which looks like this:
 
 <img src="/assets/images/linkedin-arrow.png" width="548" height="384">
 ```
