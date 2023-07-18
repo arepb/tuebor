@@ -6,8 +6,10 @@ nav_order: 3
 
 # How to make the Tuebor Pledge
 
-1. Make an investment in a Michigan startup this year.
-2. Make another one next year.
+**1. Make an investment in a Michigan startup this year.
+2. Make another one next year.**
+
+---
 
 If you're in, **make your pledge public** by listing Tuebor on your LinkedIn.
 
