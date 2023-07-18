@@ -1,7 +1,6 @@
 ---
 layout: default
 title: Make your Tuebor pledge public
-nav_order: 1
 parent: howto
 permalink: /howto/makepublic
 ---
