@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Make your Tuebor pledge public
-parent: howto
+parent: How To
 permalink: /howto/makepublic
 ---
 
