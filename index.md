@@ -8,6 +8,7 @@ nav_order: 1
 
 
 
+
 **What is Tuebor?**
 
 Tuebor is a commitment to invest in at least one Michigan-based startup per year. 
