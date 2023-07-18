@@ -5,7 +5,7 @@ theme: just-the-docs
 baseurl: ""
 url: https://tuebor.org
 
-logo: "/blob/7fbafd77aad9e75b15cfc106344660fdd3eab1f8/assets/images/%E2%80%8ETuebor%20logo%20400.png"
+logo: "https://github.com/arepb/tuebor/blob/f22f4202b6772723d29dee253f6b1376fb6ac1b5/assets/images/%E2%80%8ETuebor%20logo%20400.png"
 
 aux_links:
   Template Repository: https://github.com/just-the-docs/just-the-docs-template
