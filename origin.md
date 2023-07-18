@@ -10,4 +10,5 @@ nav_order: 2
 
 The Tuebor pledge -- as a call to arms for those who want to actively invest in the state's incredible founders -- was started by investors and Michiganders [Reilly Brennan](https://www.linkedin.com/in/reillybrennan/) and [Chris Thomas](https://www.linkedin.com/in/christopherthomas/) in 2023. 
 
+
 ![](/assets/images/‎Tuebor arrow.‎001.jpeg)
