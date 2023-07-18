@@ -5,6 +5,8 @@ parent: How To
 permalink: /howto/makepublic
 ---
 
+# How to make your Tuebor pledge public
+
 If you're in, **make your pledge public** by listing Tuebor on your LinkedIn.
 
 Here's what you do:
