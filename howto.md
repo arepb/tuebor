@@ -21,4 +21,4 @@ Here's what you do:
 
 Note: Finally, to make sure this new 'job' isn't the first listing in order on your profile, you can drag it up and down using the carrot symbol which looks like this:
 
-![](/assets/images/linkedin-arrow.png)
+<img src="/assets/images/linkedin-arrow.png" width="548" height="384">
