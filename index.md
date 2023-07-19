@@ -8,8 +8,6 @@ nav_order: 1
 ---
 
 
-{: .fs-5 }
-
 **What is Tuebor?**
 
 Tuebor is a commitment to invest in at least one State of Michigan-based startup per year. 
