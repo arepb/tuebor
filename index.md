@@ -8,7 +8,7 @@ nav_order: 1
 ---
 
 
-{: .fs-5 
+{: .fs-5 }
 
 **What is Tuebor?**
 
@@ -29,8 +29,6 @@ There is no minimum dollar amount to be make the Tuebor pledge, just that you co
 **How do I make the pledge?**
 
 Start now. Make an investment in a Michigan company during this calendar year and then [show the world](/howto) you've made the Tuebor honor pledge. 
-
-}
 
 ----
 
