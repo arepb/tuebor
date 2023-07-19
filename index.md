@@ -19,7 +19,7 @@ No, Tuebor is an honor pledge. Tuebor does not collect fees and does not in any 
 
 **How much money do I need to make per investment?**
 
-There is no minimum dollar amount to be make the Tuebor pledge, just that you commit to making at least one investment in a State of Michigan-based startup per year. An individual making an investment of $1,000 is the 'same' as someone investing $1,000,000. 
+There is no minimum dollar amount to make the Tuebor pledge, just that you commit to making at least one investment in a State of Michigan-based startup per year. An individual making an investment of $1,000 is the 'same' as someone investing $1,000,000. 
 
 **How do I make the pledge?**
 
