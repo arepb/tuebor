@@ -7,7 +7,7 @@ nav_order: 1
 
 **What is Tuebor?**
 
-Tuebor is a commitment to invest in at least one State of Michigan-based startup per year. 
+Tuebor is an honor-pledge commitment to invest in at least one State of Michigan-based startup per year. 
 
 **What is the goal of Tuebor?**
 
