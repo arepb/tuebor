@@ -4,7 +4,7 @@ layout: home
 nav_order: 3
 ---
 
-# How to make the Tuebor Pledge
+# How to take the Tuebor Pledge
 
 <br/> 
 **1. Make an investment in a Michigan business this year.** <br/>
