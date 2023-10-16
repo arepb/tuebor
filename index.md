@@ -11,7 +11,7 @@ Tuebor is an honor-pledge commitment to invest in at least one State of Michigan
 
 **What is the goal of Tuebor?**
 
-The more Michigan leaders support Michigan founders, the more Michigan leaders we’ll have. Tuebor’s success will mean the State of Michigan will have more individual venture capital investors than anywhere else on earth.
+Our goal is to increase the number of Michigan investors backing Michigan businesses.
 
 **Are there fees / costs associated with Tuebor?**
 
@@ -19,7 +19,7 @@ No, Tuebor is an honor pledge. Tuebor does not collect fees and does not in any 
 
 **How much money do I need to make per investment?**
 
-There is no minimum dollar amount to make the Tuebor pledge, just that you commit to making at least one investment in a State of Michigan-based business per year. An individual making an investment of $1,000 is the 'same' as someone investing $1,000,000. Even buying one share of stock in a Michigan business counts.
+There is no minimum dollar amount to make the Tuebor pledge, just that you commit to making at least one investment in a State of Michigan-based business per year. An individual making an investment of $10 is the 'same' as someone investing $1,000,000. Even buying one share of stock in a Michigan business counts.
 
 **How do I make the pledge?**
 
