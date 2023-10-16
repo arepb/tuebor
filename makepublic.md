@@ -13,7 +13,7 @@ Here's what you do:
 
 - Go to your profile page on [LinkedIn](https://www.linkedin.com/in/) and click the + sign to list a new job (note, this is not a 'group' but actually listed as a job on LinkedIn). Look for [Tuebor](https://linkedin.com/company/tuebororg).
 - Role: Pledge Investor
-- Description: Through Tuebor.org, I make the pledge to invest in at least one State of Michigan-based business per year. 
+- Description: Through Tuebor.org, I take the pledge to invest in at least one State of Michigan-based business per year. 
 
 ![](/assets/images/linkedin-post.png)
 
