@@ -8,7 +8,7 @@ nav_order: 2
 
 *Tuebor* is the word found on Michigan's state flag; in Latin it means 'I will defend' and refers to the state's frontier position.
 
-The Tuebor pledge -- as a call to arms for those who want to actively invest in the state's incredible founders -- was started by investors and Michiganders [Reilly Brennan](https://www.linkedin.com/in/reillybrennan/) and [Chris Thomas](https://www.linkedin.com/in/christopherthomas/) in 2023. We say that making the Tuebor pledge is like supporting ‘Michigan’s fifth sports team.’
+The Tuebor pledge -- as a call to arms for those who want to actively invest in the state's incredible founders -- was started by investors and Michiganders [Reilly Brennan](https://www.linkedin.com/in/reillybrennan/) and [Chris Thomas](https://www.linkedin.com/in/christopherthomas/) in 2023. We say that taking the Tuebor pledge is like supporting ‘Michigan’s fifth sports team.’
 
 
 ![](/assets/images/‎Tuebor arrow.‎001.jpeg)
