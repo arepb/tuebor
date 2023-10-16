@@ -19,9 +19,9 @@ No, Tuebor is an honor pledge. Tuebor does not collect fees and does not in any 
 
 **How much money do I need to make per investment?**
 
-There is no minimum dollar amount to make the Tuebor pledge, just that you commit to making at least one investment in a State of Michigan-based business per year. An individual making an investment of $10 is the 'same' as someone investing $1,000,000. Even buying one share of stock in a Michigan business counts.
+There is no minimum dollar amount to take the Tuebor commitment. Someone who takes the Tuebor pledge can invest in a groundbreaking new Michigan technology startup each year or simply buy a single share of Kellogg's or Ford Motor Company stock. An individual making an investment of $10 is the ‘same’ as someone investing $1,000,000. All efforts count toward our goal: to increase the number of Michigan investors backing Michigan businesses. 
 
-**How do I make the pledge?**
+**How do I take the pledge?**
 
 Start now. Make an investment in a Michigan business during this calendar year and then [show the world](/howto) you've made the Tuebor honor pledge, aka supporting 'Michigan's fifth sports team.'
 
