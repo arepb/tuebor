@@ -23,7 +23,7 @@ There is no minimum dollar amount to make the Tuebor commitment. Someone who tak
 
 **How do I take the pledge?**
 
-Start now. Make an investment in a Michigan business during this calendar year and then [show the world](/howto) you've committed to take the Tuebor honor pledge, aka supporting 'Michigan's fifth sports team.'
+Start now. Make an investment in a Michigan business during this calendar year and then [show the world](/howto) you've committed to take the Tuebor honor pledge, aka supporting 'Michigan's next sports team.'
 
 ----
 
