@@ -11,4 +11,4 @@ nav_order: 3
 **2. Make another one next year.**
 
 <br/> 
-Ready to tell the world you've made the Tuebor pledge? [Follow these instructions](howto/makepublic.html).
+Ready to tell the world you're taking the Tuebor pledge? [Follow these instructions](howto/makepublic.html).
