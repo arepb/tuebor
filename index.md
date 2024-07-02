@@ -15,7 +15,7 @@ Our goal is to increase the number of Michigan investors backing Michigan busine
 
 **Are there fees / costs associated with Tuebor?**
 
-No, Tuebor is an honor pledge. Tuebor does not collect fees and does not in any way enter in the flow of money when you make an investment. Individuals make their own investments independently; Tuebor does not make investment recommendations and is not an investment advisor.
+No, Tuebor is an honor pledge. Tuebor does not collect fees and does not in any way enter in the flow of money when you make an investment. Individuals make their own investments independently; Tuebor does not make investment recommendations and is not an investment advisor. Please see our [legal disclaimer](legal-disclaimer.html).
 
 **How much money do I need to make per investment?**
 
