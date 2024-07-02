@@ -6,6 +6,8 @@ nav_order: 3
 
 # How to take the Tuebor Pledge
 
+<br/> (note: this is not investent advice)
+
 <br/> 
 **1. Make an investment in a Michigan business this year.** <br/>
 **2. Make another one next year.**
