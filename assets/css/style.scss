@@ -114,10 +114,13 @@ body.home-intro.scrolled .site-header--home .wordmark {
   border-bottom: 1px solid var(--blue);
 }
 .home .hero .eyebrow-row {
-  display: flex; justify-content: space-between; align-items: baseline;
+  display: flex; justify-content: space-between; align-items: baseline; gap: 12px;
   font-family: var(--mono); font-size: 13px; text-transform: uppercase; letter-spacing: 0.1em;
   color: rgba(255,255,255,0.7);
   margin-bottom: clamp(32px, 6vw, 64px);
+}
+@media (max-width: 600px) {
+  .home .hero .eyebrow-row { flex-direction: column; align-items: flex-start; gap: 6px; }
 }
 .home .hero h1 {
   font-family: var(--display);
@@ -307,7 +310,7 @@ section.slab.blue {
 .pull blockquote {
   margin: 0;
   font-family: var(--display);
-  font-size: clamp(32px, 5.5vw, 88px);
+  font-size: clamp(40px, 5.5vw, 88px);
   line-height: 1;
   letter-spacing: -0.01em;
   max-width: 18ch;
