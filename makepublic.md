@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Make your pledge public
+description: Tell the world you've taken the Tuebor pledge by listing it on your LinkedIn profile as a Pledge Investor.
 eyebrow: 03 / Pledge · Make it public
 display_title: Make it public.
 permalink: /howto/makepublic

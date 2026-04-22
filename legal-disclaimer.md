@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Legal Disclaimer
+description: Tuebor is provided for informational purposes only. Nothing on this site constitutes investment, legal, tax, or financial advice.
 eyebrow: 04 / Legal
 display_title: Legal.
 permalink: /legal-disclaimer.html

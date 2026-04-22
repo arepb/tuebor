@@ -24,9 +24,9 @@ OUT_SIZE = 900  # @2x; display size ~450px
 
 # Tuned so both subjects land with similar face scale after cropping.
 SOURCES = [
-    # filename,           out_prefix, face_y, scale
-    ("reilly-source.jpg", "reilly",   0.38,   0.48),
-    ("chris-source.jpeg", "chris",    0.44,   0.86),
+    # filename,            out_prefix, face_y, scale
+    ("reilly-source.jpg",  "reilly",   0.40,   0.66),
+    ("chris-source2.jpeg", "chris",    0.40,   0.72),
 ]
 
 
