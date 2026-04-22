@@ -1,13 +1,23 @@
 title: Tuebor
-description: Tuebor is a commitment to invest in at least one Michigan-based startup per year.
-theme: just-the-docs
-
+description: An honor pledge to invest in at least one Michigan-based business per year.
 baseurl: ""
 url: https://tuebor.org
 
-logo: "https://raw.githubusercontent.com/arepb/tuebor/main/assets/images/%E2%80%8ETuebor-log.%E2%80%8E002.png"
-
 favicon_ico: "/assets/images/favicon.ico"
 
-aux_links:
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - index-test.md
+  - vendor
+  - _sass
+  - _includes/components
+  - _includes/css
+  - _includes/icons
+  - _includes/js
+  - _includes/lunr
+  - _includes/vendor
 
+plugins:
+  - jekyll-seo-tag

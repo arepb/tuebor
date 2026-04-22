@@ -1,14 +1,30 @@
 ---
+layout: default
 title: Origin
-layout: home
-nav_order: 2
+eyebrow: 02 / Origin
+display_title: Origin.
+permalink: /origin.html
 ---
-
-# Origin
 
 *Tuebor* is the word found on Michigan's state flag; in Latin it means 'I will defend' and refers to the state's frontier position.
 
-The Tuebor pledge -- as a call to arms for those who want to actively invest in the state's incredible founders -- was started by investors and Michiganders [Reilly Brennan](https://www.linkedin.com/in/reillybrennan/) and [Chris Thomas](https://www.linkedin.com/in/christopherthomas/) in 2023. We say that taking the Tuebor pledge is like supporting ‘Michigan’s next sports team.’
+![Tuebor arrow](/assets/images/tuebor-arrow.001.jpeg)
 
+The Tuebor pledge — as a call to arms for those who want to actively invest in the state's incredible founders — was started by investors and Michiganders [Reilly Brennan](https://www.linkedin.com/in/reillybrennan/) and [Chris Thomas](https://www.linkedin.com/in/christopherthomas/) in 2023. We say that taking the Tuebor pledge is like supporting 'Michigan's next sports team.'
 
-![](/assets/images/‎Tuebor arrow.‎001.jpeg)
+<div class="founders">
+  <figure class="founder">
+    <img src="/assets/images/reilly-halftone.png" alt="Reilly Brennan" loading="lazy">
+    <figcaption>
+      <strong>Reilly Brennan</strong>
+      <a href="https://www.linkedin.com/in/reillybrennan/">LinkedIn ↗</a>
+    </figcaption>
+  </figure>
+  <figure class="founder">
+    <img src="/assets/images/chris-halftone.png" alt="Chris Thomas" loading="lazy">
+    <figcaption>
+      <strong>Chris Thomas</strong>
+      <a href="https://www.linkedin.com/in/christopherthomas/">LinkedIn ↗</a>
+    </figcaption>
+  </figure>
+</div>

@@ -1,16 +1,21 @@
 ---
+layout: default
 title: How To
-layout: home
-nav_order: 3
+eyebrow: 03 / Pledge
+display_title: Take the pledge.
+permalink: /howto.html
 ---
 
-# How to take the Tuebor Pledge
+Two steps. No paperwork. (This is [not investment advice](/legal-disclaimer.html).)
 
-<br/> (note: this is [not investment advice](legal-disclaimer.html))
+### 01. Make an investment in a Michigan business this year.
 
-<br/> 
-**1. Make an investment in a Michigan business this year.** <br/>
-**2. Make another one next year.**
+Public or private. Startup or blue-chip. $10 or $1,000,000 — it all counts.
 
-<br/> 
-Ready to tell the world you're taking the Tuebor pledge? [Follow these instructions](howto/makepublic.html).
+### 02. Make another one next year.
+
+That's the pledge.
+
+---
+
+Ready to tell the world? [Make your Tuebor pledge public](/howto/makepublic).

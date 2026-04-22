@@ -1,41 +1,86 @@
----
-layout: table_wrappers
----
-
 <!DOCTYPE html>
-
-<html lang="{{ site.lang | default: 'en-US' }}">
-{% include head.html %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% if page.title and page.url != "/" %}{{ page.title }} — {{ site.title }}{% else %}{{ site.title }} — {{ site.description }}{% endif %}</title>
+  <meta name="description" content="{{ page.description | default: site.description }}">
+  <link rel="icon" href="{{ site.favicon_ico | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  {% seo %}
+</head>
 <body>
-  <a class="skip-to-main" href="#main-content">Skip to main content</a>
-  {% include icons/icons.html %}
-  {% include components/sidebar.html %}
-  <div class="main" id="top">
-    {% include components/header.html %}
-    <div id="main-content-wrap" class="main-content-wrap">
-      {% include components/breadcrumbs.html %}
-      <div id="main-content" class="main-content">
-        <main>
-          {% if site.heading_anchors != false %}
-            {% include vendor/anchor_headings.html html=content beforeHeading="true" anchorBody="<svg viewBox=\"0 0 16 16\" aria-hidden=\"true\"><use xlink:href=\"#svg-link\"></use></svg>" anchorClass="anchor-heading" anchorAttrs="aria-labelledby=\"%html_id%\"" %}
-          {% else %}
-            {{ content }}
-          {% endif %}
+  <header class="site-header{% if page.url == '/' %} site-header--home{% endif %}">
+    <a href="{{ '/' | relative_url }}" class="wordmark">Tuebor</a>
+    <nav class="site-nav">
+      <a href="{{ '/origin.html' | relative_url }}">Origin</a>
+      <a href="{{ '/howto.html' | relative_url }}">Pledge</a>
+    </nav>
+  </header>
 
-          {% if page.has_children == true and page.has_toc != false %}
-            {% include components/children_nav.html %}
-          {% endif %}
-        </main>
-        {% include components/footer.html %}
+  <main class="{% if page.url == '/' %}home{% else %}page{% endif %}">
+    {% if page.url != '/' and page.title %}
+      <section class="page-hero">
+        <p class="eyebrow">{{ page.eyebrow | default: page.title }}</p>
+        <h1>{{ page.display_title | default: page.title }}</h1>
+      </section>
+    {% endif %}
+    <div class="prose">
+      {{ content }}
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div>
+        <p class="footer-word">Tuebor</p>
+        <p class="footer-tag">An honor&#8209;pledge investment commitment for Michigan.</p>
+      </div>
+      <div>
+        <p class="footer-label">Site</p>
+        <a href="{{ '/' | relative_url }}">Home</a>
+        <a href="{{ '/origin.html' | relative_url }}">Origin</a>
+        <a href="{{ '/howto.html' | relative_url }}">How to pledge</a>
+      </div>
+      <div>
+        <p class="footer-label">More</p>
+        <a href="https://linkedin.com/company/tuebororg" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="{{ '/legal-disclaimer.html' | relative_url }}">Legal disclaimer</a>
+      </div>
+      <div>
+        <p class="footer-label">Est.</p>
+        <p>2023 — Michigan</p>
       </div>
     </div>
-    {% if site.search_enabled != false %}
-      {% include components/search_footer.html %}
-    {% endif %}
-  </div>
+    <div class="footer-bottom">
+      <span>© {{ 'now' | date: '%Y' }} Tuebor</span>
+      <span>Not investment advice.</span>
+    </div>
+  </footer>
 
-  {% if site.mermaid %}
-    {% include components/mermaid.html %}
+  {% if page.url == '/' %}
+  <script>
+    (function () {
+      var hero = document.querySelector('[data-hero-wordmark]');
+      var body = document.body;
+      if (!hero || !('IntersectionObserver' in window)) {
+        body.classList.add('scrolled');
+        return;
+      }
+      // Start with header wordmark hidden on home; fade it in once the hero wordmark scrolls out.
+      body.classList.add('home-intro');
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) {
+            body.classList.remove('scrolled');
+          } else {
+            body.classList.add('scrolled');
+          }
+        });
+      }, { rootMargin: '-60px 0px 0px 0px', threshold: 0 });
+      io.observe(hero);
+    })();
+  </script>
   {% endif %}
 </body>
 </html>
