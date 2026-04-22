@@ -420,7 +420,11 @@ main.home > .prose { max-width: none; padding: 0; font-size: inherit; }
 .founder figcaption a:hover { color: var(--blue-dark); }
 
 @media (max-width: 600px) {
-  .founders { grid-template-columns: 1fr; }
+  /* Keep founders side-by-side on mobile, but stack the caption so the name
+     and LinkedIn link always fit comfortably in the narrower column. */
+  .founders { gap: 12px; }
+  .founder figcaption { flex-direction: column; align-items: flex-start; gap: 4px; }
+  .founder figcaption strong { font-size: 15px; }
 }
 
 /* -------- Footer -------- */
