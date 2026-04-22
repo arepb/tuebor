@@ -149,6 +149,7 @@ body.scrolled .hero-wordmark {
   color: #fff;
 }
 .home .hero .tagline em { font-style: normal; color: rgba(255,255,255,0.65); }
+.home .hero .tagline .parenthetical { color: var(--tan); font-style: normal; }
 .home .hero .cta-row {
   margin-top: clamp(32px, 5vw, 56px);
   display: flex; flex-wrap: wrap; gap: 16px;
