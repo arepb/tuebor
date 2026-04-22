@@ -38,9 +38,9 @@ def make():
     tw = bbox[2] - bbox[0]
     th = bbox[3] - bbox[1]
 
-    # Left-aligned, vertically biased slightly above center for visual balance.
+    # Left-aligned, vertically centered now that the tagline is gone.
     x = PADDING
-    y = (H - th) // 2 - 30 - bbox[1]
+    y = (H - th) // 2 - bbox[1]
     draw.text((x, y), wordmark, font=font_main, fill=WHITE)
 
     # --- Tan accent square "period" to match the hero ---
@@ -54,15 +54,6 @@ def make():
     font_mono = ImageFont.truetype(str(FONT_PATH), 22)
     draw.text((PADDING, PADDING), "AN HONOR PLEDGE  ·  EST. 2023", font=font_mono, fill=(255, 255, 255, 178))
     draw.text((W - PADDING - 120, PADDING), "MICHIGAN", font=font_mono, fill=(255, 255, 255, 178))
-
-    # --- Tagline: below wordmark ---
-    font_tag = ImageFont.truetype(str(FONT_PATH), 34)
-    tag_y = y + bbox[1] + th + 60
-    # Two-line tagline — the tan parenthetical keeps continuity with the site.
-    draw.text((PADDING, tag_y), "An honor-pledge commitment by the",
-              font=font_tag, fill=WHITE)
-    draw.text((PADDING, tag_y + 44), "people who really love Michigan.",
-              font=font_tag, fill=TAN)
 
     # --- URL bottom-right ---
     font_url = ImageFont.truetype(str(FONT_PATH), 22)
