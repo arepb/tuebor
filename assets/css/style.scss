@@ -106,6 +106,63 @@ body.home-intro.scrolled .site-header--home .wordmark {
 .site-nav a { border: none; }
 .site-nav a:hover { color: var(--blue); }
 
+.nav-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  padding: 8px;
+  margin: -8px;
+  cursor: pointer;
+  color: inherit;
+  width: 40px; height: 40px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 6px;
+}
+.nav-toggle-bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: currentColor;
+  transition: transform 200ms ease, opacity 200ms ease;
+}
+body.nav-open .nav-toggle-bar:first-child { transform: translateY(4px) rotate(45deg); }
+body.nav-open .nav-toggle-bar:last-child { transform: translateY(-4px) rotate(-45deg); }
+
+@media (max-width: 600px) {
+  .nav-toggle { display: inline-flex; }
+  .site-nav {
+    position: absolute;
+    top: 100%; left: 0; right: 0;
+    flex-direction: column;
+    gap: 0;
+    background: var(--paper);
+    border-bottom: 1px solid var(--line);
+    padding: 8px var(--page-pad) 16px;
+    transform: translateY(-8px);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 180ms ease, opacity 180ms ease;
+  }
+  .site-nav a { padding: 12px 0; border-bottom: 1px solid var(--line); }
+  .site-nav a:last-child { border-bottom: none; }
+  body.nav-open .site-nav {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+  /* Match nav panel to header theme over the blue hero */
+  body.home-intro:not(.scrolled) .site-header--home .site-nav {
+    background: var(--blue);
+    border-bottom-color: rgba(255,255,255,0.2);
+  }
+  body.home-intro:not(.scrolled) .site-header--home .site-nav a {
+    color: #fff;
+    border-bottom-color: rgba(255,255,255,0.15);
+  }
+}
+
 /* -------- Hero (home) -------- */
 .home .hero {
   padding: clamp(56px, 12vw, 180px) var(--page-pad) clamp(48px, 9vw, 120px);
@@ -120,7 +177,13 @@ body.home-intro.scrolled .site-header--home .wordmark {
   margin-bottom: clamp(24px, 6vw, 64px);
 }
 @media (max-width: 600px) {
-  .home .hero .eyebrow-row { flex-direction: column; align-items: flex-start; gap: 4px; }
+  .home .hero { padding-top: 24px; }
+  .home .hero .eyebrow-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    margin-bottom: clamp(80px, 22vw, 140px);
+  }
 }
 .home .hero h1 {
   font-family: var(--display);
