@@ -189,6 +189,14 @@
         var open = document.body.classList.toggle('nav-open');
         btn.setAttribute('aria-expanded', open ? 'true' : 'false');
       });
+      document.querySelectorAll('.js-email').forEach(function (el) {
+        var u = el.getAttribute('data-user');
+        var d = el.getAttribute('data-domain');
+        if (!u || !d) return;
+        var addr = u + '\u0040' + d;
+        el.setAttribute('href', 'mailto:' + addr);
+        el.textContent = addr;
+      });
       nav.addEventListener('click', function (e) {
         if (e.target.tagName === 'A') {
           document.body.classList.remove('nav-open');

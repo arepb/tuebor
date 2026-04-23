@@ -18,14 +18,20 @@ The Tuebor pledge — as a call to arms for those who want to actively invest in
     <img src="/assets/images/reilly-halftone.png" alt="Reilly Brennan" loading="lazy">
     <figcaption>
       <strong>Reilly Brennan</strong>
-      <a href="https://www.linkedin.com/in/reillybrennan/">LinkedIn ↗</a>
+      <span class="founder-links">
+        <a href="https://www.linkedin.com/in/reillybrennan/">LinkedIn ↗</a>
+        <a class="js-email" data-user="reilly" data-domain="tuebor.org" href="#">Email ↗</a>
+      </span>
     </figcaption>
   </figure>
   <figure class="founder">
     <img src="/assets/images/chris-halftone.png" alt="Chris Thomas" loading="lazy">
     <figcaption>
       <strong>Chris Thomas</strong>
-      <a href="https://www.linkedin.com/in/christopherthomas/">LinkedIn ↗</a>
+      <span class="founder-links">
+        <a href="https://www.linkedin.com/in/christopherthomas/">LinkedIn ↗</a>
+        <a class="js-email" data-user="chris" data-domain="tuebor.org" href="#">Email ↗</a>
+      </span>
     </figcaption>
   </figure>
 </div>
