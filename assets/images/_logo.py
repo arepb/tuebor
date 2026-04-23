@@ -192,6 +192,116 @@ def hex_to_rgba(hex_str: str, alpha: int = 255):
 
 
 # ---------------------------------------------------------------------------
+# Square formats (wordmark centered in a square canvas)
+# ---------------------------------------------------------------------------
+
+def build_png_square(fg, bg, size: int, wordmark_ratio: float = 0.74) -> Image.Image:
+    """Render 'TUEBOR.' centered in a square of the given pixel size.
+
+    wordmark_ratio: width of the wordmark (including accent) as a fraction of
+    canvas width. ~0.74 leaves a comfortable margin while keeping the mark
+    prominent.
+    """
+    target_w = int(size * wordmark_ratio)
+
+    lo, hi = 10, size * 3
+    for _ in range(30):
+        mid = (lo + hi) // 2
+        font = ImageFont.truetype(str(FONT_PATH), mid)
+        bbox = font.getbbox(WORDMARK)
+        tw = bbox[2] - bbox[0]
+        th = bbox[3] - bbox[1]
+        dot_side = max(int(th * 0.20), 2)
+        dot_gap = max(int(th * 0.05), 1)
+        full_w = tw + dot_gap + dot_side
+        if full_w < target_w:
+            lo = mid + 1
+        else:
+            hi = mid - 1
+    font_size = max(lo - 1, 10)
+    font = ImageFont.truetype(str(FONT_PATH), font_size)
+    bbox = font.getbbox(WORDMARK)
+    tw = bbox[2] - bbox[0]
+    th = bbox[3] - bbox[1]
+    dot_side = max(int(th * 0.20), 2)
+    dot_gap = max(int(th * 0.05), 1)
+    full_w = tw + dot_gap + dot_side
+
+    img = Image.new("RGBA", (size, size), bg)
+    draw = ImageDraw.Draw(img, "RGBA")
+
+    x = (size - full_w) // 2 - bbox[0]
+    y = (size - th) // 2 - bbox[1]
+    draw.text((x, y), WORDMARK, font=font, fill=fg)
+
+    dot_x = (size - full_w) // 2 + tw + dot_gap
+    dot_y = y + bbox[1] + th - dot_side
+    tan_rgb = tuple(int(TAN[i : i + 2], 16) for i in (1, 3, 5))
+    draw.rectangle((dot_x, dot_y, dot_x + dot_side, dot_y + dot_side), fill=tan_rgb)
+    return img
+
+
+def build_svg_square(fg: str, bg: str | None, wordmark_ratio: float = 0.74) -> str:
+    """Square SVG with the wordmark centered. 1024-unit viewBox."""
+    font = TTFont(str(FONT_PATH))
+    cmap = font.getBestCmap()
+    glyf = font.getGlyphSet()
+    hmtx = font["hmtx"]
+    os2 = font["OS/2"]
+    cap_height = getattr(os2, "sCapHeight", None) or font["head"].yMax
+
+    x_cursor = 0
+    glyph_paths = []
+    for ch in WORDMARK:
+        gname = cmap[ord(ch)]
+        glyph = glyf[gname]
+        pen = SVGPathPen(glyf)
+        glyph.draw(pen)
+        glyph_paths.append((pen.getCommands(), x_cursor))
+        x_cursor += hmtx[gname][0]
+    wm_w = x_cursor
+
+    dot_side = int(cap_height * 0.20)
+    dot_gap = int(cap_height * 0.05)
+    full_w = wm_w + dot_gap + dot_side
+
+    # Canvas size in font units — derive from wordmark_ratio so padding is proportional
+    canvas = int(full_w / wordmark_ratio)
+    # Center the artwork
+    tx = (canvas - full_w) / 2
+    # Vertically center on cap-height
+    ty = (canvas - cap_height) / 2
+
+    bg_layer = ""
+    if bg:
+        bg_layer = f'<rect width="{canvas}" height="{canvas}" fill="{bg}"/>\n  '
+
+    glyph_elems = []
+    for d, x_off in glyph_paths:
+        glyph_elems.append(
+            f'<path d="{d}" transform="translate({x_off} 0)" fill="{fg}"/>'
+        )
+    glyphs_svg = "\n      ".join(glyph_elems)
+    accent_svg = (
+        f'<rect x="{wm_w + dot_gap}" y="0" width="{dot_side}" height="{dot_side}" '
+        f'fill="{ACCENT}"/>'
+    )
+
+    svg = (
+        f'<svg xmlns="http://www.w3.org/2000/svg" '
+        f'viewBox="0 0 {canvas} {canvas}" '
+        f'width="{canvas}" height="{canvas}" '
+        f'role="img" aria-label="Tuebor">\n  '
+        f'{bg_layer}'
+        f'<g transform="translate({tx} {ty + cap_height}) scale(1 -1)">\n    '
+        f'<g>\n      {glyphs_svg}\n      {accent_svg}\n    </g>\n  '
+        f'</g>\n'
+        f'</svg>\n'
+    )
+    return svg
+
+
+# ---------------------------------------------------------------------------
 # Main
 # ---------------------------------------------------------------------------
 
@@ -205,15 +315,30 @@ VARIANTS = [
 ]
 
 PNG_HEIGHTS = [512, 1024, 2048]
+SQUARE_SIZES = [512, 1024, 2048]
 
 
 def main():
     for name, fg_hex, bg_hex in VARIANTS:
-        # SVG
+        # --- Wide (wordmark-only) SVG + PNGs ---
         svg = build_svg(fg_hex, bg_hex)
         svg_path = OUT_DIR / f"{name}.svg"
         svg_path.write_text(svg)
         print(f"wrote {svg_path.relative_to(HERE.parent.parent)}")
+
+        # --- Square SVG + PNGs ---
+        sq_svg = build_svg_square(fg_hex, bg_hex)
+        sq_svg_path = OUT_DIR / f"{name}-square.svg"
+        sq_svg_path.write_text(sq_svg)
+        print(f"wrote {sq_svg_path.relative_to(HERE.parent.parent)}")
+
+        fg_rgba_sq = hex_to_rgba(fg_hex)
+        bg_rgba_sq = hex_to_rgba(bg_hex) if bg_hex else (0, 0, 0, 0)
+        for s in SQUARE_SIZES:
+            img = build_png_square(fg_rgba_sq, bg_rgba_sq, s)
+            out = OUT_DIR / f"{name}-square-{s}.png"
+            img.save(out, optimize=True)
+            print(f"wrote {out.relative_to(HERE.parent.parent)} ({img.size[0]}x{img.size[1]})")
 
         # PNGs
         fg_rgba = hex_to_rgba(fg_hex)
