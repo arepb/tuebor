@@ -496,7 +496,7 @@ main.home > .prose { max-width: none; padding: 0; font-size: inherit; }
   /* Stack founders vertically on mobile so each caption has full width —
      names stay on one line and email addresses sit cleanly below. */
   .founders { grid-template-columns: 1fr; gap: 24px; }
-  .prose .founder img, .founder img { aspect-ratio: 3 / 2; object-position: center top; }
+  .prose .founder img, .founder img { aspect-ratio: auto; }
   .founder figcaption strong { font-size: 18px; }
 }
 
