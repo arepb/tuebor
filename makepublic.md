@@ -50,7 +50,7 @@ Get on the public roster at [tuebor.org/roster/](/roster/). Send us your story a
 
 ### What we need
 
-- **Your name and city** in Michigan.
+- **Your name and city.**
 - **Your LinkedIn URL.** This is your pledge proof — see step 01 above.
 - **A high-resolution headshot.** Bigger is better. We render it as a halftone portrait, so a sharp, well-lit photo gives the best result.
 - **150–300 words on why you took the pledge.** First person. Your own voice.
