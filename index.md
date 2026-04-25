@@ -13,6 +13,7 @@ permalink: /
   <p class="tagline"><em>I will defend.</em> An honor&#8209;pledge commitment <span class="parenthetical">(for people who really love Michigan)</span> to invest in one State of Michigan&#8209;based business per year.</p>
   <div class="cta-row">
     <a href="/howto.html" class="btn primary">Take the pledge <span class="arrow">→</span></a>
+    <a href="/roster/" class="btn">See the roster</a>
     <a href="/origin.html" class="btn">Read the origin</a>
   </div>
 </section>

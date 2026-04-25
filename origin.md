@@ -13,25 +13,14 @@ permalink: /origin.html
 
 The Tuebor pledge — as a call to arms for those who want to actively invest in the state's incredible founders — was started by investors and Michiganders [Reilly Brennan](https://www.linkedin.com/in/reillybrennan/) and [Chris Thomas](https://www.linkedin.com/in/christopherthomas/) in 2023. We say that taking the Tuebor pledge is like supporting 'Michigan's next sports team.'
 
-<div class="founders">
-  <figure class="founder">
-    <img src="/assets/images/reilly-halftone.png" alt="Reilly Brennan" loading="lazy">
-    <figcaption>
-      <strong>Reilly Brennan</strong>
-      <span class="founder-links">
-        <a href="https://www.linkedin.com/in/reillybrennan/">LinkedIn ↗</a>
-        <a class="js-email" data-user="reilly" data-domain="tuebor.org" href="#">Email ↗</a>
-      </span>
-    </figcaption>
-  </figure>
-  <figure class="founder">
-    <img src="/assets/images/chris-halftone.png" alt="Chris Thomas" loading="lazy">
-    <figcaption>
-      <strong>Chris Thomas</strong>
-      <span class="founder-links">
-        <a href="https://www.linkedin.com/in/christopherthomas/">LinkedIn ↗</a>
-        <a class="js-email" data-user="chris" data-domain="tuebor.org" href="#">Email ↗</a>
-      </span>
-    </figcaption>
-  </figure>
-</div>
+<section class="slab blue cta-slab" id="join">
+  <div class="section-head">
+    <div class="num">03 / Join</div>
+    <h2>Take the pledge.</h2>
+  </div>
+  <p style="font-size: clamp(20px, 2vw, 28px); max-width: 640px; margin: 0 0 40px;">Back a Michigan company this year — and every year. Then put yourself on the wall.</p>
+  <div class="cta-row">
+    <a href="{{ '/howto.html' | relative_url }}" class="btn" style="background:#fff; color: var(--blue); border-color:#fff;">How to pledge <span class="arrow">→</span></a>
+    <a href="{{ '/roster/' | relative_url }}" class="btn" style="border-color:#fff; color:#fff;">See the roster</a>
+  </div>
+</section>
