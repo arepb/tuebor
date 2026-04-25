@@ -742,10 +742,6 @@ main.home > .prose { max-width: none; padding: 0; font-size: inherit; }
 .sample-card-wrap .sample-card .card-mark { font-size: 11px; }
 .sample-card-wrap .sample-card .card-year { font-size: 9px; padding: 2px 5px 1px; }
 .sample-card-wrap .sample-card .card-band { padding: 10px 12px 12px; }
-.sample-card-wrap .sample-card .card-photo img {
-  filter: blur(7px);
-  transform: scale(1.08); /* hide blurred edges */
-}
 .sample-card-caption {
   font-family: var(--mono);
   font-size: 10px;

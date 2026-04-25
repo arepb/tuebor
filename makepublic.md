@@ -36,7 +36,7 @@ Get on the public roster at [tuebor.org/roster/](/roster/). Send us your story a
           <span class="card-year">&rsquo;{{ 'now' | date: '%y' }}</span>
         </header>
         <figure class="card-photo">
-          <img src="{{ '/assets/images/pledgees/chris-thomas-halftone.png' | relative_url }}" alt="" aria-hidden="true">
+          <img src="{{ '/assets/images/sample-halftone.png' | relative_url }}" alt="" aria-hidden="true">
         </figure>
         <footer class="card-band">
           <strong class="pledgee-name">Your<br>name here</strong>
@@ -45,7 +45,7 @@ Get on the public roster at [tuebor.org/roster/](/roster/). Send us your story a
       </div>
     </div>
   </div>
-  <p class="sample-card-caption">A sample card.<br>Yours could go here.</p>
+  <p class="sample-card-caption">Your Tuebor card</p>
 </aside>
 
 ### What we need
