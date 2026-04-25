@@ -574,9 +574,9 @@ main.home > .prose { max-width: none; padding: 0; font-size: inherit; }
   margin: 0 auto;
 }
 .roster-lede {
-  font-size: clamp(20px, 1.8vw, 24px);
-  line-height: 1.45;
-  max-width: 720px;
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 60ch;
   margin: 0 0 clamp(40px, 6vw, 72px);
   color: var(--ink);
 }
