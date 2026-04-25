@@ -90,7 +90,7 @@ permalink: /
 </section>
 
 <section class="slab blue" id="join">
-  <div class="section-head">
+  <div class="section-head section-head--stacked">
     <div class="num">03 / Join</div>
     <h2>Ready?</h2>
   </div>

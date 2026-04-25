@@ -282,6 +282,12 @@ section.slab.blue {
   align-items: baseline;
   margin-bottom: clamp(32px, 5vw, 56px);
 }
+/* Stacked variant — eyebrow above heading, used where body content
+   needs to align with the heading (no left-side number gutter). */
+.section-head--stacked {
+  display: block;
+}
+.section-head--stacked .num { margin-bottom: 12px; }
 .section-head .num {
   font-family: var(--mono); font-size: 13px; letter-spacing: 0.1em;
   color: var(--muted);
