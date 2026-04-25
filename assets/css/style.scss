@@ -550,11 +550,11 @@ main.home > .prose { max-width: none; padding: 0; font-size: inherit; }
 .footer-bottom span + span { text-align: right; line-height: 1.5; }
 
 /* -------- Roster grid + pledgee cards -------- */
-/* The roster breaks out of the default .prose max-width so the 3-col grid
-   has room to breathe on desktop. */
-.prose:has(> .roster),
-.prose:has(> .pledgee),
-.prose:has(> .cta-slab) { max-width: none; padding-left: 0; padding-right: 0; }
+/* Pages that contain full-bleed children (roster grid, pledgee profile,
+   .slab.blue CTA) opt out of the default .prose max-width via this class.
+   Avoid the :has() pseudo-class — older Sass compilers (incl. GitHub Pages')
+   silently fail mid-file when they hit it. */
+.prose--full { max-width: none; padding-left: 0; padding-right: 0; }
 .roster {
   padding: clamp(32px, 5vw, 64px) var(--page-pad) clamp(56px, 8vw, 96px);
   max-width: var(--max);
