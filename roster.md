@@ -8,19 +8,16 @@ permalink: /roster/
 ---
 
 {% assign published = site.pledgees | where: "published", true %}
-{% assign by_year = published | sort: "year_joined" %}
-{% assign years = by_year | map: "year_joined" | uniq %}
+{% assign founders = published | where: "founder", true | sort: "last_name" %}
+{% assign rest = published | where_exp: "p", "p.founder != true" | sort: "last_name" %}
 
 <div class="roster">
-  {% for yr in years %}
-    {% assign in_year = by_year | where: "year_joined", yr | sort: "last_name" %}
-    <section class="roster-year">
-      <p class="roster-year-label">Joined {{ yr }}</p>
-      <div class="roster-grid">
-        {% for p in in_year %}
-          {% include pledgee-card.html pledgee=p %}
-        {% endfor %}
-      </div>
-    </section>
-  {% endfor %}
+  <div class="roster-grid">
+    {% for p in founders %}
+      {% include pledgee-card.html pledgee=p %}
+    {% endfor %}
+    {% for p in rest %}
+      {% include pledgee-card.html pledgee=p %}
+    {% endfor %}
+  </div>
 </div>
