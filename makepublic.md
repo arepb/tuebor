@@ -25,7 +25,7 @@ To make sure this new 'job' isn't the first listing in order on your profile, yo
 
 ## 02. Add yourself to the roster.
 
-Get on the public roster at [tuebor.org/roster/](/roster/). Send us your story and we'll author your profile by hand.
+Get on the public roster at [tuebor.org/roster/](/roster/). Send us your story and we'll add you, too.
 
 ### What we need
 
