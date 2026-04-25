@@ -1,6 +1,7 @@
 ---
 layout: pledgee
 name: Chris Thomas
+last_name: Thomas
 slug: chris-thomas
 city: Detroit
 year_joined: 2023

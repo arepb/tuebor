@@ -1,6 +1,7 @@
 ---
 layout: pledgee
 name: Reilly Brennan
+last_name: Brennan
 slug: reilly-brennan
 city: Birmingham
 year_joined: 2023

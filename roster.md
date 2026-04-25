@@ -12,6 +12,7 @@ permalink: /roster/
 {% assign rest = published | where_exp: "p", "p.founder != true" | sort: "last_name" %}
 
 <div class="roster">
+  <p class="roster-lede">Michiganders who've signed the pledge. Each card is a public commitment to back at least one Michigan business this year — and every year. <a href="{{ '/howto/makepublic' | relative_url }}">Add yourself</a>.</p>
   <div class="roster-grid">
     {% for p in founders %}
       {% include pledgee-card.html pledgee=p %}

@@ -573,14 +573,20 @@ main.home > .prose { max-width: none; padding: 0; font-size: inherit; }
   max-width: var(--max);
   margin: 0 auto;
 }
-.roster-year + .roster-year { margin-top: clamp(48px, 7vw, 88px); }
-.roster-year-label {
-  font-family: var(--mono);
-  font-size: 13px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--muted);
-  margin: 0 0 clamp(20px, 3vw, 32px);
+.roster-lede {
+  font-size: clamp(20px, 1.8vw, 24px);
+  line-height: 1.45;
+  max-width: 720px;
+  margin: 0 0 clamp(40px, 6vw, 72px);
+  color: var(--ink);
+}
+.roster-lede a {
+  color: var(--blue);
+  border-bottom: 1px solid var(--blue);
+}
+.roster-lede a:hover {
+  color: var(--blue-dark);
+  border-color: var(--blue-dark);
 }
 
 .roster-grid {

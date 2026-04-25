@@ -3,6 +3,7 @@
 # Keep `published: false` until the profile is ready to go live.
 layout: pledgee
 name: Full Name
+last_name: Name                    # REQUIRED for roster sort. GitHub Pages doesn't run custom plugins, so set explicitly.
 slug: full-name                    # REQUIRED, unique. Uniqueness enforced by _plugins/check_unique_slugs.rb.
 city: City
 region: Southeast Michigan         # optional
