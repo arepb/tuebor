@@ -274,10 +274,11 @@ section.slab.dark a:hover { color: var(--blue); }
 section.slab.blue {
   background: var(--blue); color: #fff;
 }
-/* Constrain Ready? slab content to a reading column so it doesn't sprawl
-   on wide viewports — matches the site's prose/profile max widths. */
-section.slab.blue > * {
-  max-width: 880px;
+/* Center the Ready? slab content in a reading column to match the
+   prose width on the rest of the site. */
+section.slab.blue .slab-inner {
+  max-width: 780px;
+  margin: 0 auto;
 }
 
 .section-head {

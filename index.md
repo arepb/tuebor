@@ -90,13 +90,15 @@ permalink: /
 </section>
 
 <section class="slab blue" id="join">
-  <div class="section-head section-head--stacked">
-    <div class="num">03 / Join</div>
-    <h2>Ready?</h2>
-  </div>
-  <p style="font-size: clamp(20px, 2vw, 28px); max-width: 640px; margin: 0 0 40px;">Take the pledge. Back a Michigan company this year — and every year.</p>
-  <div class="cta-row">
-    <a href="/howto.html" class="btn" style="background:#fff; color: var(--blue); border-color:#fff;">How to pledge <span class="arrow">→</span></a>
-    <a href="/origin.html" class="btn" style="border-color:#fff; color:#fff;">Read the origin</a>
+  <div class="slab-inner">
+    <div class="section-head section-head--stacked">
+      <div class="num">03 / Join</div>
+      <h2>Ready?</h2>
+    </div>
+    <p style="font-size: clamp(20px, 2vw, 28px); max-width: 640px; margin-bottom: 40px;">Take the pledge. Back a Michigan company this year — and every year.</p>
+    <div class="cta-row">
+      <a href="/howto.html" class="btn" style="background:#fff; color: var(--blue); border-color:#fff;">How to pledge <span class="arrow">→</span></a>
+      <a href="/origin.html" class="btn" style="border-color:#fff; color:#fff;">Read the origin</a>
+    </div>
   </div>
 </section>
