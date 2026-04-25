@@ -27,6 +27,36 @@ To make sure this new 'job' isn't the first listing in order on your profile, yo
 
 Get on the public roster at [tuebor.org/roster/](/roster/). Send us your story and we'll add you, too.
 
+<aside class="sample-card-wrap" aria-label="Sample roster card">
+  <div class="pledgee-card pledgee-card--grid sample-card">
+    <div class="card">
+      <div class="card-inner">
+        <header class="card-frame">
+          <span class="card-mark">Tuebor<span class="card-mark-dot">.</span></span>
+          <span class="card-year">&rsquo;{{ 'now' | date: '%y' }}</span>
+        </header>
+        <figure class="card-photo">
+          <svg class="sample-card-halftone" viewBox="0 0 80 100" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <defs>
+              <pattern id="sample-halftone-dots" x="0" y="0" width="4" height="4" patternUnits="userSpaceOnUse">
+                <circle cx="2" cy="2" r="1.1" fill="currentColor"/>
+              </pattern>
+            </defs>
+            <rect width="80" height="100" fill="var(--tan)" opacity="0.35"/>
+            <rect width="80" height="100" fill="url(#sample-halftone-dots)"/>
+            <path d="M40 38c5.5 0 10-4.5 10-10s-4.5-10-10-10-10 4.5-10 10 4.5 10 10 10zm0 6c-9 0-22 4.5-22 13.5V72h44v-14.5C62 48.5 49 44 40 44z" fill="var(--paper)" opacity="0.85"/>
+          </svg>
+        </figure>
+        <footer class="card-band">
+          <strong class="pledgee-name">Your<br>name here</strong>
+          <span class="pledgee-meta">Your city</span>
+        </footer>
+      </div>
+    </div>
+  </div>
+  <p class="sample-card-caption">A sample card.<br>Yours could go here.</p>
+</aside>
+
 ### What we need
 
 - **Your name and city** in Michigan.
