@@ -5,7 +5,6 @@ description: Tell the world you're on the team — list Tuebor on your LinkedIn 
 eyebrow: 03 / Pledge · Make it public
 display_title: "Tell the world you're on the team."
 permalink: /howto/makepublic
-prose_full: true
 ---
 
 You took the pledge. You backed a Michigan company. Tuebor is Michigan's next sports team — now tell people you're on it. Two steps.
