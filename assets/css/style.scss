@@ -570,13 +570,16 @@ main.home > .prose { max-width: none; padding: 0; font-size: inherit; }
 /* Inside a default (non-full) .prose, a `.slab` child breaks out of the
    780px column and gutter padding to span the full viewport width. Used on
    the origin page where the body text wants prose constraints but the
-   trailing Take-the-pledge CTA wants full-bleed. */
-.prose > .slab,
-.prose > section.slab {
+   trailing Take-the-pledge CTA wants full-bleed. Scoped to .page so the
+   home layout (which has padding:0 on .prose) doesn't get a negative-margin
+   shift that pulls every slab off the left edge. */
+main.page > .prose > .slab,
+main.page > .prose > section.slab {
   width: 100vw;
   max-width: none;
   margin-left: calc(-1 * var(--page-pad));
   margin-right: calc(-1 * var(--page-pad));
+  margin-top: clamp(48px, 7vw, 96px);
   position: relative;
 }
 .roster {
