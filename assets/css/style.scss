@@ -555,6 +555,19 @@ main.home > .prose { max-width: none; padding: 0; font-size: inherit; }
    Avoid the :has() pseudo-class — older Sass compilers (incl. GitHub Pages')
    silently fail mid-file when they hit it. */
 .prose--full { max-width: none; padding-left: 0; padding-right: 0; }
+
+/* Inside a default (non-full) .prose, a `.slab` child breaks out of the
+   780px column and gutter padding to span the full viewport width. Used on
+   the origin page where the body text wants prose constraints but the
+   trailing Take-the-pledge CTA wants full-bleed. */
+.prose > .slab,
+.prose > section.slab {
+  width: 100vw;
+  max-width: none;
+  margin-left: calc(-1 * var(--page-pad));
+  margin-right: calc(-1 * var(--page-pad));
+  position: relative;
+}
 .roster {
   padding: clamp(32px, 5vw, 64px) var(--page-pad) clamp(56px, 8vw, 96px);
   max-width: var(--max);
