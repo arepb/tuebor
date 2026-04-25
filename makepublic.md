@@ -36,16 +36,7 @@ Get on the public roster at [tuebor.org/roster/](/roster/). Send us your story a
           <span class="card-year">&rsquo;{{ 'now' | date: '%y' }}</span>
         </header>
         <figure class="card-photo">
-          <svg class="sample-card-halftone" viewBox="0 0 80 100" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-            <defs>
-              <pattern id="sample-halftone-dots" x="0" y="0" width="4" height="4" patternUnits="userSpaceOnUse">
-                <circle cx="2" cy="2" r="1.1" fill="currentColor"/>
-              </pattern>
-            </defs>
-            <rect width="80" height="100" fill="var(--tan)" opacity="0.35"/>
-            <rect width="80" height="100" fill="url(#sample-halftone-dots)"/>
-            <path d="M40 38c5.5 0 10-4.5 10-10s-4.5-10-10-10-10 4.5-10 10 4.5 10 10 10zm0 6c-9 0-22 4.5-22 13.5V72h44v-14.5C62 48.5 49 44 40 44z" fill="var(--paper)" opacity="0.85"/>
-          </svg>
+          <img src="{{ '/assets/images/pledgees/chris-thomas-halftone.png' | relative_url }}" alt="" aria-hidden="true">
         </figure>
         <footer class="card-band">
           <strong class="pledgee-name">Your<br>name here</strong>

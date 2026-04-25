@@ -728,32 +728,38 @@ main.home > .prose { max-width: none; padding: 0; font-size: inherit; }
 /* Sample card preview on /howto/makepublic — floats next to the "what we need" list. */
 .sample-card-wrap {
   float: right;
-  width: 200px;
-  margin: 4px 0 16px 32px;
+  width: 140px;
+  margin: 4px 0 16px 28px;
   shape-outside: margin-box;
 }
 .sample-card-wrap .sample-card { pointer-events: none; }
-.sample-card-wrap .sample-card .pledgee-name { min-height: 0; }
-.sample-card-halftone {
-  width: 100%;
-  height: 100%;
-  display: block;
-  color: var(--ink);
+.sample-card-wrap .sample-card .pledgee-name {
+  min-height: 0;
+  font-size: 16px;
+}
+.sample-card-wrap .sample-card .pledgee-meta { font-size: 10px; }
+.sample-card-wrap .sample-card .card-frame { padding: 6px 10px; }
+.sample-card-wrap .sample-card .card-mark { font-size: 11px; }
+.sample-card-wrap .sample-card .card-year { font-size: 9px; padding: 2px 5px 1px; }
+.sample-card-wrap .sample-card .card-band { padding: 10px 12px 12px; }
+.sample-card-wrap .sample-card .card-photo img {
+  filter: blur(7px);
+  transform: scale(1.08); /* hide blurred edges */
 }
 .sample-card-caption {
   font-family: var(--mono);
-  font-size: 11px;
+  font-size: 10px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--ink-2, #6b6b6b);
   text-align: center;
-  margin: 12px 0 0;
+  margin: 10px 0 0;
   line-height: 1.45;
 }
 @media (max-width: 720px) {
   .sample-card-wrap {
     float: none;
-    width: 180px;
+    width: 140px;
     margin: 8px auto 24px;
   }
 }
