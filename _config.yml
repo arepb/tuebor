@@ -18,6 +18,19 @@ exclude:
   - _includes/js
   - _includes/lunr
   - _includes/vendor
+  - assets/images/pledgees/_sources
+
+collections:
+  pledgees:
+    output: true
+    permalink: /roster/:slug/
+
+defaults:
+  - scope:
+      path: ""
+      type: pledgees
+    values:
+      layout: pledgee
 
 plugins:
   - jekyll-seo-tag

@@ -6,3 +6,10 @@ vendor/
 .bundle/
 .DS_Store
 Gemfile.lock
+
+# Raw pledgee source photos — personally identifiable; only halftones are committed.
+assets/images/pledgees/_sources/
+
+# Python bytecode from local image-generation scripts.
+__pycache__/
+*.pyc
