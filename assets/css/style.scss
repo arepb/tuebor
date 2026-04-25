@@ -226,7 +226,8 @@ body.scrolled .hero-wordmark {
 }
 @media (max-width: 600px) {
   .home .hero .cta-row { gap: 12px; }
-  .home .hero .cta-row .btn { width: 100%; justify-content: space-between; }
+  .cta-row { gap: 12px; }
+  .cta-row .btn { width: 100%; justify-content: space-between; }
 }
 
 .btn {
