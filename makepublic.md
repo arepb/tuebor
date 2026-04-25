@@ -64,7 +64,7 @@ I took the pledge. Here is my info for the roster.
 
 — BASICS —
 Name:
-City (in Michigan):
+City:
 LinkedIn URL:
 
 — STORY —
