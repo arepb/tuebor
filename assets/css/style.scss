@@ -89,6 +89,7 @@ body.home-intro.scrolled .site-header--home .site-nav a:hover { color: var(--blu
   transition: opacity 280ms ease, transform 280ms ease;
 }
 .wordmark:hover { color: var(--blue); }
+.wordmark .accent, .footer-word .accent { color: var(--tan); }
 
 /* On the home page, the big hero wordmark acts as the brand mark.
    The small header wordmark fades in only after the user has scrolled past the hero. */
