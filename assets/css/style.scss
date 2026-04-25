@@ -85,10 +85,10 @@ body.home-intro.scrolled .site-header--home .site-nav a:hover { color: var(--blu
   font-size: 26px;
   letter-spacing: 0.02em;
   border: none;
-  color: var(--ink);
-  transition: opacity 280ms ease, transform 280ms ease;
+  color: var(--blue);
+  transition: opacity 280ms ease, transform 280ms ease, color 240ms ease;
 }
-.wordmark:hover { color: var(--blue); }
+.wordmark:hover { color: var(--blue-dark); }
 .wordmark .accent, .footer-word .accent { color: var(--tan); }
 
 /* On the home page, the big hero wordmark acts as the brand mark.
