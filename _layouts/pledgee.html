@@ -1,0 +1,80 @@
+---
+layout: default
+---
+{%- assign backed_public = page.backed | where: "public", true -%}
+{%- assign backed_count = backed_public | size -%}
+{%- assign first_year = page.year_joined -%}
+{%- if backed_public and backed_count > 0 -%}
+  {%- assign earliest = backed_public | sort: "year" | first -%}
+  {%- if earliest.year < first_year -%}{%- assign first_year = earliest.year -%}{%- endif -%}
+{%- endif -%}
+{%- assign latest_year = "now" | date: "%Y" -%}
+{%- assign tenure = latest_year | minus: first_year -%}
+<article class="pledgee">
+  <header class="pledgee-hero">
+    <div class="pledgee-hero-card">
+      {% include pledgee-card.html pledgee=page size="hero" linked=false %}
+    </div>
+    <div class="pledgee-hero-meta">
+      <p class="eyebrow">04 / Roster</p>
+      <h1 class="pledgee-h1">{{ page.name }}</h1>
+      <dl class="pledgee-vitals">
+        <div><dt>Joined</dt><dd>{{ page.year_joined }}</dd></div>
+        {%- if backed_count > 0 %}
+        <div><dt>Backed</dt><dd>{{ backed_count }}</dd></div>
+        {%- endif %}
+        {%- if tenure > 0 %}
+        <div><dt>Tenure</dt><dd>{{ tenure }} <span class="vital-unit">{% if tenure == 1 %}yr{% else %}yrs{% endif %}</span></dd></div>
+        {%- endif %}
+      </dl>
+      {%- if page.linkedin %}
+      <p class="pledgee-hero-cta">
+        <a class="btn primary" href="{{ page.linkedin }}" target="_blank" rel="noopener">LinkedIn <span class="arrow">↗</span></a>
+      </p>
+      {%- endif %}
+
+      {%- if backed_public and backed_count > 0 %}
+      {%- assign backed_sorted = backed_public | sort: "year" | reverse %}
+      <section class="backed">
+        <p class="backed-label">Michigan companies backed</p>
+        <ul>
+          {%- for b in backed_sorted %}
+          <li>
+            <span class="backed-year">{{ b.year }}</span>
+            <span class="backed-sep">·</span>
+            {%- if b.url %}
+            <a class="backed-company" href="{{ b.url }}" target="_blank" rel="noopener">{{ b.company }}</a>
+            {%- else %}
+            <span class="backed-company">{{ b.company }}</span>
+            {%- endif %}
+            {%- if b.note %}<span class="backed-note">{{ b.note }}</span>{% endif %}
+          </li>
+          {%- endfor %}
+        </ul>
+      </section>
+      {%- endif %}
+    </div>
+  </header>
+
+  {%- if page.quote and page.quote != "" %}
+  <blockquote class="quote">&ldquo;{{ page.quote }}&rdquo;<span class="tan">.</span></blockquote>
+  {%- endif %}
+
+  <div class="pledgee-body">
+    {{ content }}
+  </div>
+
+  <hr class="pledgee-hairline">
+</article>
+
+<section class="slab blue cta-slab" id="join">
+  <div class="section-head">
+    <div class="num">03 / Join</div>
+    <h2>Take the pledge.</h2>
+  </div>
+  <p style="font-size: clamp(20px, 2vw, 28px); max-width: 640px; margin: 0 0 40px;">Back a Michigan company this year — and every year.</p>
+  <div class="cta-row">
+    <a href="{{ '/howto.html' | relative_url }}" class="btn" style="background:#fff; color: var(--blue); border-color:#fff;">How to pledge <span class="arrow">→</span></a>
+    <a href="{{ '/roster/' | relative_url }}" class="btn" style="border-color:#fff; color:#fff;">See the roster</a>
+  </div>
+</section>

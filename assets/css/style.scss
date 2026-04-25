@@ -549,6 +549,315 @@ main.home > .prose { max-width: none; padding: 0; font-size: inherit; }
 }
 .footer-bottom span + span { text-align: right; line-height: 1.5; }
 
+/* -------- Roster grid + pledgee cards -------- */
+/* The roster breaks out of the default .prose max-width so the 3-col grid
+   has room to breathe on desktop. */
+.prose:has(> .roster),
+.prose:has(> .pledgee),
+.prose:has(> .cta-slab) { max-width: none; padding-left: 0; padding-right: 0; }
+.roster {
+  padding: clamp(32px, 5vw, 64px) var(--page-pad) clamp(56px, 8vw, 96px);
+  max-width: var(--max);
+  margin: 0 auto;
+}
+.roster-year + .roster-year { margin-top: clamp(48px, 7vw, 88px); }
+.roster-year-label {
+  font-family: var(--mono);
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 clamp(20px, 3vw, 32px);
+}
+
+.roster-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(24px, 4vw, 56px);
+}
+@media (max-width: 900px) { .roster-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 480px) { .roster-grid { grid-template-columns: 1fr; } }
+
+/* Trading-card aesthetic — Topps-inspired frame, halftone portrait, blue name band. */
+.pledgee-card,
+.prose .pledgee-card {
+  display: block;
+  border: none;
+  color: var(--ink);
+  text-decoration: none;
+  transition: transform 120ms ease;
+}
+/* Outer paper-stock matte — the card-as-object.
+   Inset hairline echoes the worn rule line on a vintage Topps cardstock edge. */
+.pledgee-card .card {
+  background: var(--paper-2);
+  border: 1px solid rgba(10, 10, 10, 0.45);
+  padding: clamp(10px, 1.2vw, 14px);
+  box-shadow: inset 0 0 0 1px rgba(196, 161, 94, 0.22);
+}
+/* Inner ink frame — sits inside the matte. */
+.pledgee-card .card-inner {
+  border: 1px solid var(--ink);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: var(--paper);
+}
+.pledgee-card .card-frame {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 8px 14px;
+  border-bottom: 1px solid var(--ink);
+  background: var(--paper);
+}
+.pledgee-card .card-mark {
+  font-family: var(--display);
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: 1;
+}
+.pledgee-card .card-mark-dot { color: var(--tan); }
+.pledgee-card .card-year {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: var(--ink);
+  border: 1px solid var(--tan);
+  padding: 3px 7px 2px;
+  line-height: 1;
+  background: var(--paper);
+}
+.pledgee-card figure.card-photo,
+.pledgee-card .card-photo {
+  margin: 0;
+  aspect-ratio: 4 / 5;
+  background: var(--paper);
+  overflow: hidden;
+  border-bottom: 1px solid var(--ink);
+}
+.prose .pledgee-card .card-photo img,
+.pledgee-card .card-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  background: var(--paper);
+  border: none;
+  margin: 0;
+  transition: filter 120ms ease, transform 220ms ease;
+}
+.pledgee-card .card-band {
+  background: var(--blue);
+  color: #fff;
+  padding: 14px 16px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.pledgee-card .pledgee-name {
+  font-family: var(--display);
+  font-size: clamp(20px, 2.4vw, 28px);
+  line-height: 1.05;
+  letter-spacing: -0.005em;
+  color: #fff;
+  margin: 0;
+  min-height: calc(2 * 1.05em); /* lock to two lines so cards stay equal height */
+}
+.pledgee-card .pledgee-meta {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+/* Hover/focus: gentle lift + photo brightness, never AI-slop bouncy. */
+.pledgee-card:hover .card,
+.pledgee-card:focus-visible .card {
+  transform: translateY(-2px);
+}
+.pledgee-card:hover .card-photo img,
+.pledgee-card:focus-visible .card-photo img {
+  filter: brightness(1.05);
+}
+.pledgee-card:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 6px;
+}
+
+/* Hero variant — used at the top of /roster/<slug>/. Bigger frame, larger name band. */
+.pledgee-card--hero {
+  display: block;
+  max-width: 480px;
+  margin: 0 0 clamp(24px, 3vw, 36px);
+}
+.pledgee-card--hero .card-frame { padding: 12px 18px; }
+.pledgee-card--hero .card-mark { font-size: 18px; }
+.pledgee-card--hero .card-year { font-size: 13px; }
+.pledgee-card--hero .card-band { padding: 18px 20px 22px; }
+.pledgee-card--hero .pledgee-name {
+  font-size: clamp(34px, 6vw, 56px);
+  line-height: 1;
+}
+.pledgee-card--hero .pledgee-meta { font-size: 13px; }
+@media (max-width: 600px) {
+  .pledgee-card--hero { max-width: 320px; margin-left: auto; margin-right: auto; }
+  .pledgee-card--hero .pledgee-name { font-size: clamp(28px, 7vw, 36px); }
+}
+
+/* -------- Profile page (/roster/<slug>/) — ESPN athlete-profile pattern -------- */
+.pledgee {
+  padding: clamp(32px, 5vw, 64px) var(--page-pad) clamp(40px, 6vw, 72px);
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.pledgee-hero {
+  display: grid;
+  grid-template-columns: minmax(280px, 1fr) 1.4fr;
+  gap: clamp(28px, 4vw, 56px);
+  align-items: start;
+  margin-bottom: clamp(40px, 6vw, 72px);
+}
+.pledgee-hero-card { width: 100%; max-width: 420px; }
+.pledgee-hero-meta { display: flex; flex-direction: column; gap: clamp(16px, 2vw, 24px); }
+.pledgee-hero-meta .eyebrow {
+  font-family: var(--mono);
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+  margin: 0;
+}
+.pledgee-h1 {
+  font-family: var(--display);
+  font-size: clamp(48px, 8vw, 112px);
+  line-height: 0.92;
+  letter-spacing: -0.015em;
+  margin: 0;
+}
+.pledgee-vitals {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 0;
+  margin: 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.pledgee-vitals > div {
+  padding: 14px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  border-right: 1px solid var(--line);
+}
+.pledgee-vitals > div:first-child { padding-left: 0; }
+.pledgee-vitals > div:last-child { border-right: none; padding-right: 0; }
+.pledgee-vitals dt {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0;
+}
+.pledgee-vitals dd {
+  font-family: var(--display);
+  font-size: clamp(28px, 3.2vw, 44px);
+  line-height: 1;
+  margin: 0;
+  color: var(--ink);
+}
+.pledgee-vitals .vital-unit {
+  font-family: var(--mono);
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  margin-left: 4px;
+  vertical-align: middle;
+  text-transform: uppercase;
+}
+.pledgee-hero-cta { margin: 0; }
+
+@media (max-width: 760px) {
+  .pledgee-hero {
+    grid-template-columns: 1fr;
+    gap: clamp(24px, 5vw, 36px);
+  }
+  .pledgee-hero-card { max-width: 320px; margin: 0 auto; }
+  .pledgee-vitals { grid-template-columns: repeat(2, 1fr); }
+  .pledgee-vitals > div:nth-child(2) { border-right: none; padding-right: 0; }
+}
+.pledgee .quote {
+  font-family: var(--display);
+  font-size: clamp(28px, 4vw, 48px);
+  line-height: 1.15;
+  letter-spacing: -0.005em;
+  max-width: 24ch;
+  margin: 0 0 clamp(32px, 5vw, 56px);
+  color: var(--ink);
+}
+.pledgee .quote .tan { color: var(--tan); }
+.pledgee-body {
+  max-width: 70ch;
+  font-size: 17px;
+  line-height: 1.65;
+  margin: 0 0 clamp(40px, 6vw, 72px);
+}
+.pledgee-body p { margin: 0 0 18px; }
+.pledgee-body a { color: var(--blue); border-bottom: 1px solid var(--blue); }
+.pledgee-body a:hover { color: var(--blue-dark); border-color: var(--blue-dark); }
+
+.pledgee .backed {
+  border-top: 1px solid var(--line);
+  padding-top: clamp(20px, 2.5vw, 28px);
+  margin: 0;
+}
+.pledgee .backed-label {
+  font-family: var(--mono);
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+  margin: 0 0 16px;
+}
+.pledgee .backed ul { list-style: none; margin: 0; padding: 0; }
+.pledgee .backed li {
+  font-family: var(--mono);
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--line);
+}
+.pledgee .backed li:last-child { border-bottom: none; }
+.pledgee .backed-year { color: var(--muted); margin-right: 8px; }
+.pledgee .backed-sep { color: var(--muted); margin-right: 8px; }
+.pledgee .backed-company {
+  font-family: var(--display);
+  font-size: 17px;
+  letter-spacing: 0;
+  color: var(--ink);
+  border: none;
+  text-transform: none;
+}
+.pledgee .backed a.backed-company,
+.prose .pledgee .backed a.backed-company { border-bottom: none; }
+.pledgee .backed a.backed-company:hover { color: var(--blue); text-decoration: underline; text-underline-offset: 3px; }
+.pledgee .backed-note { color: var(--muted); font-size: 13px; display: block; margin-top: 4px; }
+
+.pledgee-linkedin { margin: 0 0 clamp(32px, 5vw, 56px); }
+.pledgee-hairline {
+  border: none;
+  border-top: 1px solid var(--line);
+  margin: clamp(24px, 3vw, 40px) 0 0;
+}
+
+/* Origin page: founders use the same card grid, but force a 2-up layout so
+   the two founders sit shoulder-to-shoulder on desktop rather than leaving a
+   trailing empty third cell. */
+.founders-grid { grid-template-columns: repeat(2, 1fr); max-width: 820px; }
+@media (max-width: 480px) { .founders-grid { grid-template-columns: 1fr; } }
+
 @media (max-width: 900px) {
   .footer-grid { grid-template-columns: 1fr 1fr; }
 }

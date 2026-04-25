@@ -1,0 +1,42 @@
+{%- comment -%}
+Trading-card partial. Used by /roster/, profile pages, and origin.md.
+Parameters:
+  include.pledgee — a _pledgees collection item.
+  include.size    — "hero" (profile-page top) or omitted (grid card).
+  include.linked  — false to render a non-link <article> (profile hero).
+{%- endcomment -%}
+{%- assign p = include.pledgee -%}
+{%- assign yr2 = p.year_joined | modulo: 100 -%}
+{%- if yr2 < 10 -%}{%- assign yr_short = "0" | append: yr2 -%}{%- else -%}{%- assign yr_short = yr2 -%}{%- endif -%}
+{%- if include.linked == false -%}
+<article class="pledgee-card pledgee-card--{{ include.size | default: 'grid' }}">
+{%- else -%}
+<a class="pledgee-card pledgee-card--{{ include.size | default: 'grid' }}" href="{{ p.url | relative_url }}">
+{%- endif -%}
+  <div class="card">
+    <div class="card-inner">
+      <header class="card-frame">
+        <span class="card-mark">Tuebor<span class="card-mark-dot">.</span></span>
+        <span class="card-year">&rsquo;{{ yr_short }}</span>
+      </header>
+      <figure class="card-photo">
+        <img src="{{ p.portrait | relative_url }}" alt="{{ p.name }}" loading="lazy">
+      </figure>
+      {%- assign name_parts = p.name | split: " " -%}
+      <footer class="card-band">
+        <strong class="pledgee-name">
+          {%- if name_parts.size > 1 -%}
+            {{ name_parts[0] }}<br>{{ name_parts | slice: 1, 99 | join: " " }}
+          {%- else -%}
+            {{ p.name }}
+          {%- endif -%}
+        </strong>
+        {%- if p.city %}<span class="pledgee-meta">{{ p.city }}</span>{% endif -%}
+      </footer>
+    </div>
+  </div>
+{%- if include.linked == false -%}
+</article>
+{%- else -%}
+</a>
+{%- endif -%}
