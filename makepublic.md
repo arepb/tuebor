@@ -7,7 +7,7 @@ display_title: "Tell the world you're on the team."
 permalink: /howto/makepublic
 ---
 
-You took the pledge. You backed a Michigan company. Tuebor is Michigan's next sports team — now tell people you're on it. Two steps.
+You took the pledge. You backed a Michigan company. Now put on the jersey.
 
 ## 01. List Tuebor on your LinkedIn.
 
