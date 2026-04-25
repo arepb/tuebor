@@ -72,10 +72,9 @@ def make_og(pledgee: dict, halftone_path: Path, out_path: Path):
     name_y = py + 24
     draw.text((text_x, name_y - name_bbox[1]), name, font=font_name, fill=WHITE)
 
-    # Meta line: <city> · joined <year>
-    city = str(pledgee.get("city", ""))
+    # Meta line: joined <year>
     year = pledgee.get("year_joined", "")
-    meta = f"{city}  ·  JOINED {year}".upper()
+    meta = f"JOINED {year}".upper()
     font_meta = ImageFont.truetype(str(FONT_PATH), 26)
     meta_y = name_y + name_h + 24
     draw.text((text_x, meta_y), meta, font=font_meta, fill=WHITE_MUTED)
