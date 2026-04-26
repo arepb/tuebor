@@ -90,8 +90,8 @@ body.home-intro.scrolled .site-header--home .site-nav a:hover { color: var(--blu
 }
 .wordmark:hover { color: var(--blue-dark); }
 .wordmark .accent, .footer-word .accent { color: var(--tan); }
-/* Footer field is tan, so the tan accent disappears — invert to ink. */
-.site-footer .footer-word .accent { color: var(--ink); }
+/* Footer field is tan, so the tan accent disappears — switch to white. */
+.site-footer .footer-word .accent { color: #fff; }
 
 /* On the home page, the big hero wordmark acts as the brand mark.
    The small header wordmark fades in only after the user has scrolled past the hero. */
