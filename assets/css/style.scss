@@ -575,14 +575,21 @@ main.home > .prose { max-width: none; padding: 0; font-size: inherit; }
    trailing Take-the-pledge CTA wants full-bleed. Scoped to .page so the
    home layout (which has padding:0 on .prose) doesn't get a negative-margin
    shift that pulls every slab off the left edge. */
-main.page > .prose > .slab,
-main.page > .prose > section.slab {
+main.page > .prose:not(.prose--full) > .slab,
+main.page > .prose:not(.prose--full) > section.slab {
   width: 100vw;
   max-width: none;
   margin-left: calc(-1 * var(--page-pad));
   margin-right: calc(-1 * var(--page-pad));
   margin-top: clamp(48px, 7vw, 96px);
   position: relative;
+}
+/* On .prose--full pages (pledgee, roster) the prose has no horizontal
+   padding, so a child slab is already viewport-wide. Just give it
+   breathing room from the content above. */
+main.page > .prose--full > .slab,
+main.page > .prose--full > section.slab {
+  margin-top: clamp(48px, 7vw, 96px);
 }
 .roster {
   padding: clamp(32px, 5vw, 64px) var(--page-pad) clamp(56px, 8vw, 96px);
