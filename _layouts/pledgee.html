@@ -29,11 +29,10 @@ layout: default
       {%- endif %}
 
       {%- if backed_public and backed_count > 0 %}
-      {%- assign backed_sorted = backed_public | sort: "year" | reverse %}
       <section class="backed">
         <p class="backed-label">Michigan companies backed</p>
         <ul>
-          {%- for b in backed_sorted %}
+          {%- for b in backed_public %}
           <li>
             <span class="backed-year">{{ b.year }}</span>
             <span class="backed-sep">·</span>
