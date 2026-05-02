@@ -8,8 +8,6 @@ layout: default
   {%- assign earliest = backed_public | sort: "year" | first -%}
   {%- if earliest.year < first_year -%}{%- assign first_year = earliest.year -%}{%- endif -%}
 {%- endif -%}
-{%- assign latest_year = "now" | date: "%Y" -%}
-{%- assign tenure = latest_year | minus: first_year -%}
 <article class="pledgee">
   <header class="pledgee-hero">
     <div class="pledgee-hero-card">
@@ -22,9 +20,6 @@ layout: default
         <div><dt>Joined</dt><dd>{{ page.year_joined }}</dd></div>
         {%- if backed_count > 0 %}
         <div><dt>Backed</dt><dd>{{ backed_count }}</dd></div>
-        {%- endif %}
-        {%- if tenure > 0 %}
-        <div><dt>Tenure</dt><dd>{{ tenure }} <span class="vital-unit">{% if tenure == 1 %}yr{% else %}yrs{% endif %}</span></dd></div>
         {%- endif %}
       </dl>
       {%- if page.linkedin %}
