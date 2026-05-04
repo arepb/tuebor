@@ -12,6 +12,7 @@ portrait: /assets/images/pledgees/reilly-brennan-halftone.png
 og_image: /assets/images/pledgees/reilly-brennan-og.png
 linkedin: https://www.linkedin.com/in/reillybrennan
 founder: true
+roster_order: 1
 quote: "Michigan is my home and also my identity."
 backed:
   - year: 2026

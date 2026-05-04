@@ -8,7 +8,7 @@ permalink: /roster/
 ---
 
 {% assign published = site.pledgees | where: "published", true %}
-{% assign founders = published | where: "founder", true | sort: "last_name" %}
+{% assign founders = published | where: "founder", true | sort: "roster_order" %}
 {% assign rest = published | where_exp: "p", "p.founder != true" | sort: "last_name" %}
 
 <div class="roster">
