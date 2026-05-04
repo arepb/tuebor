@@ -12,6 +12,7 @@ portrait: /assets/images/pledgees/chris-thomas-halftone.png
 og_image: /assets/images/pledgees/chris-thomas-og.png
 linkedin: https://www.linkedin.com/in/christopherthomas
 founder: true
+roster_order: 2
 quote: "Acta Non Verba."
 backed:
   - year: 2025
