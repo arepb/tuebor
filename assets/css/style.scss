@@ -598,6 +598,90 @@ main.page > .prose--full > section.slab {
   max-width: var(--max);
   margin: 0 auto;
 }
+
+/* -------- Backed (companies table) -------- */
+.backed {
+  padding: clamp(32px, 5vw, 64px) var(--page-pad) clamp(56px, 8vw, 96px);
+  max-width: var(--max);
+  margin: 0 auto;
+}
+.backed-lede {
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 60ch;
+  margin: 0 0 24px;
+  color: var(--ink);
+}
+.backed-lede a { color: var(--blue); border-bottom: 1px solid var(--blue); }
+.backed-lede a:hover { color: var(--blue-dark); border-color: var(--blue-dark); }
+.backed-disclaimer {
+  font-family: var(--mono);
+  font-size: 12px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--muted);
+  max-width: 70ch;
+  margin: 0 0 clamp(40px, 6vw, 72px);
+  padding: 16px 18px;
+  border: 1px solid var(--line);
+  background: var(--paper-2);
+}
+.backed-disclaimer a { color: var(--blue); border-bottom: 1px solid var(--blue); }
+.backed-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 16px;
+}
+.backed-table th {
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+  text-align: left;
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--ink);
+}
+.backed-table td {
+  padding: 18px 16px;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+}
+.backed-table tr:hover td { background: var(--paper-2); }
+.backed-table .col-year {
+  font-family: var(--mono);
+  font-size: 14px;
+  color: var(--muted);
+  width: 80px;
+  white-space: nowrap;
+}
+.backed-table .col-company {
+  font-family: var(--display);
+  font-size: clamp(18px, 1.6vw, 22px);
+  letter-spacing: -0.005em;
+  line-height: 1.15;
+}
+.backed-table .col-company a {
+  color: var(--ink);
+  border-bottom: 1px solid transparent;
+  transition: border-color 120ms ease, color 120ms ease;
+}
+.backed-table .col-company a:hover {
+  color: var(--blue);
+  border-bottom-color: var(--blue);
+}
+.backed-table .col-pledgee a {
+  color: var(--blue);
+  border-bottom: 1px solid transparent;
+}
+.backed-table .col-pledgee a:hover { border-bottom-color: var(--blue); }
+@media (max-width: 600px) {
+  .backed-table { font-size: 15px; }
+  .backed-table th, .backed-table td { padding: 12px 8px; }
+  .backed-table .col-year { width: 56px; font-size: 12px; }
+  .backed-table .col-company { font-size: 17px; }
+}
 .roster-lede {
   font-size: 18px;
   line-height: 1.6;
