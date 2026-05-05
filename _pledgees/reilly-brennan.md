@@ -4,7 +4,7 @@ name: Reilly Brennan
 last_name: Brennan
 slug: reilly-brennan
 city: Birmingham
-year_joined: 2023
+year_joined: 2017
 portrait_source: reilly-source.jpg
 portrait_face_y: 0.40
 portrait_scale: 0.66

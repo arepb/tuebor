@@ -4,7 +4,7 @@ name: Josh Berg
 last_name: Berg
 slug: josh-berg
 city: Bloomfield Hills
-year_joined: 2026
+year_joined: 2023
 portrait_source: josh-berg-source.jpg
 portrait_face_y: 0.35
 portrait_scale: 1.0

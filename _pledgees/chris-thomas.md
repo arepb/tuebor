@@ -4,7 +4,7 @@ name: Chris Thomas
 last_name: Thomas
 slug: chris-thomas
 city: Detroit
-year_joined: 2023
+year_joined: 2014
 portrait_source: chris-source.jpeg
 portrait_face_y: 0.40
 portrait_scale: 0.72
