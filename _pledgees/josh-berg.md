@@ -6,8 +6,8 @@ slug: josh-berg
 city: Bloomfield Hills
 year_joined: 2026
 portrait_source: josh-berg-source.jpg
-portrait_face_y: 0.45
-portrait_scale: 0.9
+portrait_face_y: 0.35
+portrait_scale: 1.0
 portrait: /assets/images/pledgees/josh-berg-halftone.png
 og_image: /assets/images/pledgees/josh-berg-og.png
 linkedin: https://www.linkedin.com/in/josh-berg-40414a7
@@ -24,6 +24,10 @@ backed:
   - year: 2024
     company: "The Rind"
     url: "https://www.rindbar.com/"
+    public: true
+  - year: 2023
+    company: "Hum"
+    url: "https://letshum.com/"
     public: true
 published: true
 ---
