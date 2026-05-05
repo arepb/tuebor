@@ -649,18 +649,12 @@ main.page > .prose--full > section.slab {
   vertical-align: top;
 }
 .backed-table tr:hover td { background: var(--paper-2); }
-.backed-table .col-year {
-  font-family: var(--mono);
-  font-size: 14px;
-  color: var(--muted);
-  width: 80px;
-  white-space: nowrap;
-}
 .backed-table .col-company {
   font-family: var(--display);
   font-size: clamp(18px, 1.6vw, 22px);
   letter-spacing: -0.005em;
   line-height: 1.15;
+  width: 36%;
 }
 .backed-table .col-company a {
   color: var(--ink);
@@ -671,16 +665,27 @@ main.page > .prose--full > section.slab {
   color: var(--blue);
   border-bottom-color: var(--blue);
 }
+.backed-table .col-pledgee {
+  font-size: 15px;
+  line-height: 1.55;
+}
 .backed-table .col-pledgee a {
   color: var(--blue);
   border-bottom: 1px solid transparent;
 }
 .backed-table .col-pledgee a:hover { border-bottom-color: var(--blue); }
+.backed-table .col-pledgee .year {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--muted);
+  letter-spacing: 0.05em;
+}
 @media (max-width: 600px) {
-  .backed-table { font-size: 15px; }
+  .backed-table { font-size: 14px; }
   .backed-table th, .backed-table td { padding: 12px 8px; }
-  .backed-table .col-year { width: 56px; font-size: 12px; }
-  .backed-table .col-company { font-size: 17px; }
+  .backed-table .col-company { font-size: 16px; width: auto; }
+  .backed-table .col-pledgee { font-size: 14px; }
+  .backed-table .col-pledgee .year { font-size: 11px; }
 }
 .roster-lede {
   font-size: 18px;
