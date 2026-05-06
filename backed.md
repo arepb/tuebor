@@ -50,7 +50,7 @@ to render one row per company with all backers grouped.
 " -%}
 
 <div class="backed">
-  <p class="backed-lede">Every Michigan company publicly backed by a Tuebor pledgee. <a href="{{ '/roster/' | relative_url }}">See the roster</a> · <a href="{{ '/howto/makepublic' | relative_url }}">Add yourself</a>.</p>
+  <p class="backed-lede">Every Michigan company publicly backed by a Tuebor pledgee.<br><a href="{{ '/roster/' | relative_url }}">See the roster</a> · <a href="{{ '/howto/makepublic' | relative_url }}">Add yourself</a>.</p>
 
   <p class="backed-disclaimer">This is a public record, not investment advice. Each pledgee makes their own investment decisions. Tuebor is not an investment advisor and does not collect fees or enter the flow of money. See our <a href="{{ '/legal-disclaimer.html' | relative_url }}">legal disclaimer</a>.</p>
 
