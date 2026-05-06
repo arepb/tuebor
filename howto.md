@@ -1,6 +1,6 @@
 ---
 layout: default
-title: How To
+title: How to Pledge
 description: Two steps to take the Tuebor pledge. Invest in a Michigan business this year. Do it again next year. No paperwork, no fees.
 eyebrow: 03 / Pledge
 display_title: Take the pledge.

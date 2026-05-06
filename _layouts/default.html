@@ -1,4 +1,33 @@
 <!DOCTYPE html>
+<!--
+  ╔══════════════════════════════════════════════════════════════════╗
+  ║                 S T A T E  O F  M I C H I G A N               ║
+  ╠══════════════════════════════════════════════════════════════════╣
+  ║                                                                  ║
+  ║                        E PLURIBUS UNUM                          ║
+  ║                    ___________________                           ║
+  ║                ___/                   \___                       ║
+  ║               /   ___     eagle     ___   \                     ║
+  ║               |  /   \     /|\     /   \  |                     ║
+  ║               \  \___/    / | \    \___/  /                     ║
+  ║                \_________/  |  \_________/                       ║
+  ║                             |                                    ║
+  ║     Y   Y               .---+---.               Y   Y           ║
+  ║    /|\ /|\             /  ,-----,  \            /|\ /|\         ║
+  ║   / | X | \     ------+ /  man   \  +------    / | X | \        ║
+  ║  (  E L K  )   |      | |   /\   |  |      |  ( M O O S E )    ║
+  ║   \ |   | /    |      | |  /☀\  |  |      |   \ |   | /        ║
+  ║    \|   |/      ------+ |  ~~~~  |  +------    \|   |/          ║
+  ║     |   |              `+---------+'             |   |           ║
+  ║     |   |               [TUEBOR]                 |   |           ║
+  ║                          "I will defend"                         ║
+  ║                                                                  ║
+  ║          SI QUAERIS PENINSULAM AMOENAM CIRCUMSPICE              ║
+  ║               "If you seek a pleasant peninsula,                ║
+  ║                         look about you."                        ║
+  ║                                                                  ║
+  ╚══════════════════════════════════════════════════════════════════╝
+-->
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -16,14 +45,15 @@
     {%- if page.quote -%}{%- assign pledgee_desc = pledgee_desc | append: page.quote -%}{%- endif -%}
   {%- endif -%}
   {%- assign meta_description = page.description | default: pledgee_desc | default: site.description -%}
-  <title>{% if page.title and page.url != "/" %}{{ page.title }} — {{ site.title }}{% else %}{{ site.title }} — {{ site.description }}{% endif %}</title>
+  <title>{% if page.url == "/" %}{{ site.home_title | default: site.title }}{% elsif page.title %}{{ page.title }} — {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
   <meta name="description" content="{{ meta_description }}">
+  {% if site.keywords %}<meta name="keywords" content="{{ page.keywords | default: site.keywords }}">{% endif %}
   <link rel="icon" href="{{ site.favicon_ico | relative_url }}">
   <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/images/apple-touch-icon.png' | relative_url }}">
   <link rel="canonical" href="{{ page.url | absolute_url }}">
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 
-  <meta property="og:title" content="{% if page.title and page.url != '/' %}{{ page.title }} — {{ site.title }}{% else %}{{ site.title }} — {{ site.description }}{% endif %}">
+  <meta property="og:title" content="{% if page.url == '/' %}{{ site.home_title | default: site.title }}{% elsif page.title %}{{ page.title }} — {{ site.title }}{% else %}{{ site.title }}{% endif %}">
   <meta property="og:description" content="{{ meta_description }}">
   <meta property="og:type" content="website">
   <meta property="og:url" content="{{ page.url | absolute_url }}">
@@ -33,7 +63,7 @@
   <meta property="og:site_name" content="Tuebor">
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="{% if page.title and page.url != '/' %}{{ page.title }} — {{ site.title }}{% else %}{{ site.title }} — {{ site.description }}{% endif %}">
+  <meta name="twitter:title" content="{% if page.url == '/' %}{{ site.home_title | default: site.title }}{% elsif page.title %}{{ page.title }} — {{ site.title }}{% else %}{{ site.title }}{% endif %}">
   <meta name="twitter:description" content="{{ meta_description }}">
   <meta name="twitter:image" content="{{ page.og_image | default: '/assets/images/og-image.png' | absolute_url }}">
 
@@ -109,6 +139,7 @@
         "@id": "{{ page.url | absolute_url }}#person",
         "name": "{{ page.name }}",
         "url": "{{ page.url | absolute_url }}",
+        "description": "{{ meta_description }}",
         {% if page.linkedin %}"sameAs": [ "{{ page.linkedin }}" ],{% endif %}
         {% if page.city %}"homeLocation": { "@type": "Place", "name": "{{ page.city }}, Michigan" },{% endif %}
         {% if page.portrait %}"image": "{{ page.portrait | absolute_url }}",{% endif %}
