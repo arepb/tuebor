@@ -17,6 +17,7 @@ backed:
     public: true
   - year: 2024
     company: "Stryker"
+    url: "https://www.stryker.com/"
     public: true
 published: true
 ---
