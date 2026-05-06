@@ -594,14 +594,14 @@ main.page > .prose--full > section.slab {
   margin-top: clamp(48px, 7vw, 96px);
 }
 .roster {
-  padding: clamp(32px, 5vw, 64px) var(--page-pad) clamp(56px, 8vw, 96px);
+  padding: clamp(20px, 3vw, 40px) var(--page-pad) clamp(56px, 8vw, 96px);
   max-width: var(--max);
   margin: 0 auto;
 }
 
 /* -------- Backed (companies table) -------- */
 .backed {
-  padding: clamp(32px, 5vw, 64px) var(--page-pad) clamp(56px, 8vw, 96px);
+  padding: clamp(20px, 3vw, 40px) var(--page-pad) clamp(56px, 8vw, 96px);
   max-width: var(--max);
   margin: 0 auto;
 }
@@ -691,7 +691,7 @@ main.page > .prose--full > section.slab {
   font-size: 18px;
   line-height: 1.6;
   max-width: 60ch;
-  margin: 0 0 clamp(40px, 6vw, 72px);
+  margin: 0 0 clamp(56px, 8vw, 96px);
   color: var(--ink);
 }
 .roster-lede a {
