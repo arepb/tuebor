@@ -54,7 +54,7 @@ Get on the public roster at [tuebor.org/roster/](/roster/). Send us your story a
 - **Your LinkedIn URL.** This is your pledge proof — see step 01 above.
 - **A high-resolution headshot.** Bigger is better. We render it as a halftone portrait, so a sharp, well-lit photo gives the best result.
 - **150–300 words on why you took the pledge.** First person. Your own voice.
-- **The Michigan companies you've backed** (year, company, optional link). Mark each entry public or private. Only the public ones appear on your profile.
+- **The Michigan companies you've backed** (year, company, optional link). These will appear on your public profile, but if you would prefer to keep a company name private / stealth you can do that as well.
 
 Click the button below — it opens a new email with the template pre-filled. Fill in your bits, attach your headshot, and send.
 
@@ -72,9 +72,9 @@ LinkedIn URL:
 
 
 — MICHIGAN COMPANIES BACKED —
-(One per line: year · company · optional URL · public or private)
+(One per line: year · company · optional URL. These will appear on your public profile — but if you'd rather keep a company private / stealth, mark it 'private' and we'll hide the name.)
 Examples:
-2024 · Acme Inc. · https://acme.com · public
+2024 · Acme Inc. · https://acme.com
 2025 · [stealth co] · — · private
 
 
