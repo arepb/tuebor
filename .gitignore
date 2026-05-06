@@ -13,3 +13,4 @@ assets/images/pledgees/_sources/
 # Python bytecode from local image-generation scripts.
 __pycache__/
 *.pyc
+.gstack/
