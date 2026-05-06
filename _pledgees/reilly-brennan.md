@@ -13,7 +13,7 @@ og_image: /assets/images/pledgees/reilly-brennan-og.png
 linkedin: https://www.linkedin.com/in/reillybrennan
 founder: true
 roster_order: 1
-quote: "Michigan is my home and also my identity."
+quote: "Michigan is my home and also a big part of my identity."
 backed:
   - year: 2026
     company: "Moksa"
@@ -54,7 +54,7 @@ backed:
 published: true
 ---
 
-Michigan is my home and also my identity.
+Michigan is my home and also a big part of my identity.
 
 Chris and I started Tuebor in 2023 as a long-term commitment to keep making the decision to invest in our people. For me that means backing at least one Michigan company, every year, for the rest of my life.
 
