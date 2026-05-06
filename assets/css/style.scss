@@ -416,7 +416,7 @@ section.slab.blue .slab-inner {
 /* -------- Sub-pages -------- */
 main.page { padding-bottom: 80px; }
 .page-hero {
-  padding: clamp(56px, 9vw, 120px) var(--page-pad) clamp(24px, 4vw, 48px);
+  padding: clamp(56px, 9vw, 120px) var(--page-pad) clamp(20px, 2.5vw, 32px);
   border-bottom: 1px solid var(--line);
 }
 .page-hero .eyebrow {
@@ -594,7 +594,7 @@ main.page > .prose--full > section.slab {
   margin-top: clamp(48px, 7vw, 96px);
 }
 .roster {
-  padding: clamp(20px, 3vw, 40px) var(--page-pad) clamp(56px, 8vw, 96px);
+  padding: clamp(24px, 3vw, 40px) var(--page-pad) clamp(56px, 8vw, 96px);
   max-width: var(--max);
   margin: 0 auto;
 }
