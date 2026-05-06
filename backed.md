@@ -9,9 +9,14 @@ prose_full: true
 ---
 
 {%- comment -%}
-Build a flat list of "company|url|pledgee_name|pledgee_slug|year" lines, then
-collect unique companies (case-insensitive sort key prepended) and re-iterate
-to render one row per company with all backers grouped.
+Build a flat list of rows, then collect unique companies and re-iterate to
+render one row per company with all backers grouped.
+
+Sort key layout (string-sortable, ascending):
+  company_lc | inv_year | last_name_lc | company | url | name | slug | year
+
+inv_year = 9999 - year, so larger years sort first within a company group.
+last_name_lc breaks ties when two pledgees backed in the same year.
 {%- endcomment -%}
 
 {%- assign published = site.pledgees | where: "published", true -%}
@@ -20,11 +25,13 @@ to render one row per company with all backers grouped.
   {%- if p.backed -%}
     {%- for b in p.backed -%}
       {%- if b.public -%}
-        {%- assign year = b.year | default: 0 -%}
+        {%- assign year_int = b.year | default: 0 | plus: 0 -%}
+        {%- assign inv_year = 9999 | minus: year_int -%}
         {%- assign url = b.url | default: "" -%}
         {%- assign company = b.company -%}
-        {%- assign sort_key = company | downcase -%}
-        {%- capture rows_raw -%}{{ rows_raw }}{{ sort_key }}|{{ company }}|{{ url }}|{{ p.name }}|{{ p.slug }}|{{ year }}
+        {%- assign company_lc = company | downcase -%}
+        {%- assign last_lc = p.last_name | downcase -%}
+        {%- capture rows_raw -%}{{ rows_raw }}{{ company_lc }}|{{ inv_year }}|{{ last_lc }}|{{ company }}|{{ url }}|{{ p.name }}|{{ p.slug }}|{{ year_int }}
 {% endcapture -%}
       {%- endif -%}
     {%- endfor -%}
@@ -33,7 +40,10 @@ to render one row per company with all backers grouped.
 {%- assign rows = rows_raw | strip | split: "
 " | sort -%}
 
-{%- comment -%} Build unique-company list (preserves first sort_key|company|url seen). {%- endcomment -%}
+{%- comment -%}
+Build unique-company list. parts[0]=company_lc, parts[3]=company, parts[4]=url.
+Captures the first occurrence (which after sort is the newest year).
+{%- endcomment -%}
 {%- assign seen_keys = "" -%}
 {%- assign companies_raw = "" -%}
 {%- for row in rows -%}
@@ -42,7 +52,7 @@ to render one row per company with all backers grouped.
   {%- assign sentinel = "@@" | append: key | append: "@@" -%}
   {%- unless seen_keys contains sentinel -%}
     {%- assign seen_keys = seen_keys | append: sentinel -%}
-    {%- capture companies_raw -%}{{ companies_raw }}{{ key }}|{{ parts[1] }}|{{ parts[2] }}
+    {%- capture companies_raw -%}{{ companies_raw }}{{ key }}|{{ parts[3] }}|{{ parts[4] }}
 {% endcapture -%}
   {%- endunless -%}
 {%- endfor -%}
@@ -81,7 +91,7 @@ to render one row per company with all backers grouped.
               {%- assign rparts = row | split: "|" -%}
               {%- if rparts[0] == ckey -%}
                 {%- unless first -%}, {% endunless -%}
-                <a href="{{ '/roster/' | append: rparts[4] | relative_url }}">{{ rparts[3] }}</a> <span class="year">({{ rparts[5] }})</span>
+                <a href="{{ '/roster/' | append: rparts[6] | relative_url }}">{{ rparts[5] }}</a> <span class="year">({{ rparts[7] }})</span>
                 {%- assign first = false -%}
               {%- endif -%}
             {%- endfor -%}
