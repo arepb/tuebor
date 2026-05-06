@@ -6,8 +6,8 @@ slug: pete-martin
 city: New Hudson
 year_joined: 2025
 portrait_source: pete-martin-source.jpg
-portrait_face_y: 0.40
-portrait_scale: 0.65
+portrait_face_y: 0.32
+portrait_scale: 0.55
 portrait: /assets/images/pledgees/pete-martin-halftone.png
 og_image: /assets/images/pledgees/pete-martin-og.png
 linkedin: https://www.linkedin.com/in/mrmichigan/
