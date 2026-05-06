@@ -60,7 +60,8 @@ Captures the first occurrence (which after sort is the newest year).
 " -%}
 
 <div class="backed">
-  <p class="backed-lede">Every Michigan company publicly backed by a Tuebor pledgee.<br><a href="{{ '/roster/' | relative_url }}">See the roster</a> · <a href="{{ '/howto/makepublic' | relative_url }}">Add yourself</a>.</p>
+  {%- assign company_count = companies | size -%}
+  <p class="backed-lede"><strong>{{ company_count }}</strong> Michigan {% if company_count == 1 %}company{% else %}companies{% endif %} publicly backed by a Tuebor pledgee.<br><a href="{{ '/roster/' | relative_url }}">See the roster</a> · <a href="{{ '/howto/makepublic' | relative_url }}">Add yourself</a>.</p>
 
   <p class="backed-disclaimer">This is a public record, not investment advice. Each pledgee makes their own investment decisions. Tuebor is not an investment advisor and does not collect fees or enter the flow of money. See our <a href="{{ '/legal-disclaimer.html' | relative_url }}">legal disclaimer</a>.</p>
 
