@@ -569,7 +569,7 @@ main.home > .prose { max-width: none; padding: 0; font-size: inherit; }
    .slab.blue CTA) opt out of the default .prose max-width via this class.
    Avoid the :has() pseudo-class — older Sass compilers (incl. GitHub Pages')
    silently fail mid-file when they hit it. */
-.prose--full { max-width: none; padding-left: 0; padding-right: 0; }
+.prose--full { max-width: none; padding: 0; }
 
 /* Inside a default (non-full) .prose, a `.slab` child breaks out of the
    780px column and gutter padding to span the full viewport width. Used on
