@@ -4,15 +4,27 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+  {%- comment -%}
+    Pledgees auto-derive a description from quote/city/year so OG previews
+    aren't a generic site fallback. Order: explicit page.description > pledgee
+    auto-string > site.description.
+  {%- endcomment -%}
+  {%- if page.layout == "pledgee" and page.description == nil -%}
+    {%- assign pledgee_desc = page.name | append: " — " -%}
+    {%- if page.city -%}{%- assign pledgee_desc = pledgee_desc | append: page.city | append: ", " -%}{%- endif -%}
+    {%- assign pledgee_desc = pledgee_desc | append: "Tuebor pledgee since " | append: page.year_joined | append: ". " -%}
+    {%- if page.quote -%}{%- assign pledgee_desc = pledgee_desc | append: page.quote -%}{%- endif -%}
+  {%- endif -%}
+  {%- assign meta_description = page.description | default: pledgee_desc | default: site.description -%}
   <title>{% if page.title and page.url != "/" %}{{ page.title }} — {{ site.title }}{% else %}{{ site.title }} — {{ site.description }}{% endif %}</title>
-  <meta name="description" content="{{ page.description | default: site.description }}">
+  <meta name="description" content="{{ meta_description }}">
   <link rel="icon" href="{{ site.favicon_ico | relative_url }}">
   <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/images/apple-touch-icon.png' | relative_url }}">
   <link rel="canonical" href="{{ page.url | absolute_url }}">
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 
   <meta property="og:title" content="{% if page.title and page.url != '/' %}{{ page.title }} — {{ site.title }}{% else %}{{ site.title }} — {{ site.description }}{% endif %}">
-  <meta property="og:description" content="{{ page.description | default: site.description }}">
+  <meta property="og:description" content="{{ meta_description }}">
   <meta property="og:type" content="website">
   <meta property="og:url" content="{{ page.url | absolute_url }}">
   <meta property="og:image" content="{{ page.og_image | default: '/assets/images/og-image.png' | absolute_url }}">
@@ -22,7 +34,7 @@
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="{% if page.title and page.url != '/' %}{{ page.title }} — {{ site.title }}{% else %}{{ site.title }} — {{ site.description }}{% endif %}">
-  <meta name="twitter:description" content="{{ page.description | default: site.description }}">
+  <meta name="twitter:description" content="{{ meta_description }}">
   <meta name="twitter:image" content="{{ page.og_image | default: '/assets/images/og-image.png' | absolute_url }}">
 
   {% if page.url == '/' %}
@@ -87,17 +99,64 @@
     ]
   }
   </script>
+  {% elsif page.layout == "pledgee" %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "{{ page.url | absolute_url }}#person",
+        "name": "{{ page.name }}",
+        "url": "{{ page.url | absolute_url }}",
+        {% if page.linkedin %}"sameAs": [ "{{ page.linkedin }}" ],{% endif %}
+        {% if page.city %}"homeLocation": { "@type": "Place", "name": "{{ page.city }}, Michigan" },{% endif %}
+        {% if page.portrait %}"image": "{{ page.portrait | absolute_url }}",{% endif %}
+        "memberOf": { "@id": "{{ site.url }}/#organization" },
+        "affiliation": { "@id": "{{ site.url }}/#organization" }
+      },
+      {
+        "@type": "ProfilePage",
+        "url": "{{ page.url | absolute_url }}",
+        "name": "{{ page.name }} — Tuebor",
+        "description": "{{ meta_description }}",
+        "mainEntity": { "@id": "{{ page.url | absolute_url }}#person" },
+        "isPartOf": { "@id": "{{ site.url }}/#website" },
+        "inLanguage": "en-US"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "{{ site.url }}/" },
+          { "@type": "ListItem", "position": 2, "name": "Roster", "item": "{{ site.url }}/roster/" },
+          { "@type": "ListItem", "position": 3, "name": "{{ page.name }}", "item": "{{ page.url | absolute_url }}" }
+        ]
+      }
+    ]
+  }
+  </script>
   {% else %}
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "{{ page.title }} — Tuebor",
-    "url": "{{ page.url | absolute_url }}",
-    "description": "{{ page.description | default: site.description }}",
-    "isPartOf": { "@type": "WebSite", "@id": "{{ site.url }}/#website", "name": "Tuebor", "url": "{{ site.url }}/" },
-    "publisher": { "@type": "Organization", "name": "Tuebor", "url": "{{ site.url }}/" },
-    "inLanguage": "en-US"
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "name": "{{ page.title }} — Tuebor",
+        "url": "{{ page.url | absolute_url }}",
+        "description": "{{ meta_description }}",
+        "isPartOf": { "@id": "{{ site.url }}/#website" },
+        "publisher": { "@id": "{{ site.url }}/#organization" },
+        "inLanguage": "en-US"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "{{ site.url }}/" },
+          { "@type": "ListItem", "position": 2, "name": "{{ page.title }}", "item": "{{ page.url | absolute_url }}" }
+        ]
+      }
+    ]
   }
   </script>
   {% endif %}
