@@ -5,6 +5,9 @@ description: The people who have taken the Tuebor pledge — Michigan investors 
 eyebrow: 04 / Roster
 display_title: Roster.
 permalink: /roster/
+sitemap:
+  changefreq: monthly
+  priority: 0.9
 ---
 
 {% assign published = site.pledgees | where: "published", true %}

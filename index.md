@@ -2,6 +2,9 @@
 layout: home
 title: Home
 permalink: /
+sitemap:
+  changefreq: weekly
+  priority: 1.0
 ---
 
 <section class="hero">

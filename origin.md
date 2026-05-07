@@ -5,6 +5,9 @@ description: Tuebor is the word on Michigan's state flag. The Tuebor pledge was 
 eyebrow: 02 / Origin
 display_title: Origin.
 permalink: /origin.html
+sitemap:
+  changefreq: yearly
+  priority: 0.7
 ---
 
 *Tuebor* is the word found on Michigan's state flag; in Latin it means 'I will defend' and refers to the state's frontier position.

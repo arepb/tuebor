@@ -5,6 +5,9 @@ description: Tuebor is provided for informational purposes only. Nothing on this
 eyebrow: 04 / Legal
 display_title: Legal.
 permalink: /legal-disclaimer.html
+sitemap:
+  changefreq: yearly
+  priority: 0.3
 ---
 
 ## Terms and conditions

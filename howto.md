@@ -5,6 +5,9 @@ description: Two steps to take the Tuebor pledge. Invest in a Michigan business 
 eyebrow: 03 / Pledge
 display_title: Take the pledge.
 permalink: /howto.html
+sitemap:
+  changefreq: yearly
+  priority: 0.8
 ---
 
 Two steps. No paperwork. (This is [not investment advice](/legal-disclaimer.html).)

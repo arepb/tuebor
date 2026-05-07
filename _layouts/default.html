@@ -65,17 +65,21 @@
 
   <meta property="og:title" content="{% if page.url == '/' %}{{ site.home_title | default: site.title }}{% elsif page.title %}{{ page.title }} — {{ site.title }}{% else %}{{ site.title }}{% endif %}">
   <meta property="og:description" content="{{ meta_description }}">
-  <meta property="og:type" content="website">
+  <meta property="og:type" content="{% if page.layout == 'pledgee' %}profile{% else %}website{% endif %}">
   <meta property="og:url" content="{{ page.url | absolute_url }}">
   <meta property="og:image" content="{{ page.og_image | default: '/assets/images/og-image.png' | absolute_url }}">
+  <meta property="og:image:type" content="image/png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="{% if page.layout == 'pledgee' %}{{ page.name }} — Tuebor pledgee{% else %}Tuebor — Michigan Investment Pledge{% endif %}">
+  <meta property="og:locale" content="en_US">
   <meta property="og:site_name" content="Tuebor">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="{% if page.url == '/' %}{{ site.home_title | default: site.title }}{% elsif page.title %}{{ page.title }} — {{ site.title }}{% else %}{{ site.title }}{% endif %}">
   <meta name="twitter:description" content="{{ meta_description }}">
   <meta name="twitter:image" content="{{ page.og_image | default: '/assets/images/og-image.png' | absolute_url }}">
+  <meta name="twitter:image:alt" content="{% if page.layout == 'pledgee' %}{{ page.name }} — Tuebor pledgee{% else %}Tuebor — Michigan Investment Pledge{% endif %}">
 
   {% if page.url == '/' %}
   <script type="application/ld+json">
