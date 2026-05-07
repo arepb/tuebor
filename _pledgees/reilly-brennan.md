@@ -11,6 +11,7 @@ portrait_scale: 0.66
 portrait: /assets/images/pledgees/reilly-brennan-halftone.png
 og_image: /assets/images/pledgees/reilly-brennan-og.png
 linkedin: https://www.linkedin.com/in/reillybrennan
+email_user: reilly
 founder: true
 roster_order: 1
 quote: "Michigan is my home and also a big part of my identity."

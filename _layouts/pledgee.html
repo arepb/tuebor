@@ -24,6 +24,16 @@ layout: default
       {%- if page.linkedin %}
       <p class="pledgee-hero-cta">
         <a class="btn primary" href="{{ page.linkedin }}" target="_blank" rel="noopener">LinkedIn <span class="arrow">↗</span></a>
+        {%- if page.email_user %}
+        <a class="btn" id="email-{{ page.slug }}" href="#">Email</a>
+        <script>
+          (function() {
+            var u = '{{ page.email_user }}', d = 'tuebor', t = 'org';
+            var el = document.getElementById('email-{{ page.slug }}');
+            el.href = 'mailto:' + u + '@' + d + '.' + t;
+          })();
+        </script>
+        {%- endif %}
       </p>
       {%- endif %}
 

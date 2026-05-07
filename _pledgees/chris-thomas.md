@@ -11,6 +11,7 @@ portrait_scale: 0.72
 portrait: /assets/images/pledgees/chris-thomas-halftone.png
 og_image: /assets/images/pledgees/chris-thomas-og.png
 linkedin: https://www.linkedin.com/in/christopherthomas
+email_user: chris
 founder: true
 roster_order: 2
 quote: "Acta Non Verba."
