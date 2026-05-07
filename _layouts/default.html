@@ -250,6 +250,14 @@
         <p class="footer-label">More</p>
         <a href="https://linkedin.com/company/tuebororg" target="_blank" rel="noopener">LinkedIn</a>
         <a href="{{ '/legal-disclaimer.html' | relative_url }}">Legal disclaimer</a>
+        <a id="contact-link" href="#">Contact</a>
+        <script>
+          (function() {
+            var u = 'info', d = 'tuebor', t = 'org';
+            var el = document.getElementById('contact-link');
+            el.href = 'mailto:' + u + '@' + d + '.' + t;
+          })();
+        </script>
       </div>
       <div>
         <p class="footer-label">Est.</p>
