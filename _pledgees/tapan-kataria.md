@@ -22,7 +22,7 @@ backed:
     url: "https://www.reportwell.io/"
     public: true
   - year: 2023
-    company: "mokSa.ai"
+    company: "Moksa"
     url: "https://moksa.ai/"
     public: true
   - year: 2022
