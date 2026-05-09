@@ -37,7 +37,7 @@ backed:
     url: "https://treehouse.pro/"
     public: true
   - year: 2023
-    company: "Townsend Mertz Fund II"
+    company: "Townsend Mertz Fund"
     url: "https://townsendmertz.com/"
     public: true
   - year: 2021
