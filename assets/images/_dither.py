@@ -76,10 +76,10 @@ def read_front_matter(path: Path) -> dict:
 
 # ---------- Image pipeline ----------
 
-def square_crop(im, face_y=0.5, scale=1.0):
+def square_crop(im, face_y=0.5, face_x=0.5, scale=1.0):
     w, h = im.size
     side = int(min(w, h) * scale)
-    cx = w // 2
+    cx = int(w * face_x)
     cy = int(h * face_y)
     x0 = max(0, min(w - side, cx - side // 2))
     y0 = max(0, min(h - side, cy - side // 2))
@@ -121,12 +121,12 @@ def halftone(im_gray, cell=22, max_r=12.5, blur=6, levels=5):
 
 # ---------- Driver ----------
 
-def process(src_path: Path, out_path: Path, face_y: float, scale: float):
+def process(src_path: Path, out_path: Path, face_y: float, face_x: float, scale: float):
     if out_path.exists() and src_path.stat().st_mtime <= out_path.stat().st_mtime:
         print(f"  skip {out_path.name} (up-to-date)")
         return
     im = Image.open(src_path)
-    im = square_crop(im, face_y=face_y, scale=scale)
+    im = square_crop(im, face_y=face_y, face_x=face_x, scale=scale)
     im = im.resize((OUT_SIZE, OUT_SIZE), Image.LANCZOS)
     g = prepare(im)
     halftone(g).save(out_path, optimize=True)
@@ -152,10 +152,11 @@ def main():
             print(f"skip {md.name}: source {src} not found (raw photos are gitignored — ask the pledgee)")
             continue
         face_y = float(fm.get("portrait_face_y", 0.5))
+        face_x = float(fm.get("portrait_face_x", 0.5))
         scale = float(fm.get("portrait_scale", 1.0))
         out = OUT_DIR / f"{slug}-halftone.png"
         print(f"Processing {md.name} ({slug})")
-        process(src, out, face_y, scale)
+        process(src, out, face_y, face_x, scale)
 
 
 if __name__ == "__main__":

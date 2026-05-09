@@ -7,6 +7,7 @@ city: West Bloomfield
 year_joined: 2021
 portrait_source: tapan-kataria-source.jpeg
 portrait_face_y: 0.32
+portrait_face_x: 0.466
 portrait_scale: 0.60
 portrait: /assets/images/pledgees/tapan-kataria-halftone.png
 og_image: /assets/images/pledgees/tapan-kataria-og.png
