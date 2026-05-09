@@ -13,9 +13,9 @@ Build a flat list of rows, then collect unique companies and re-iterate to
 render one row per company with all backers grouped.
 
 Sort key layout (string-sortable, ascending):
-  company_lc | inv_year | last_name_lc | company | url | name | slug | year
+  company_lc | year | last_name_lc | company | url | name | slug | year
 
-inv_year = 9999 - year, so larger years sort first within a company group.
+year sorts ascending so oldest investment lists first within a company group.
 last_name_lc breaks ties when two pledgees backed in the same year.
 {%- endcomment -%}
 
@@ -26,12 +26,11 @@ last_name_lc breaks ties when two pledgees backed in the same year.
     {%- for b in p.backed -%}
       {%- if b.public -%}
         {%- assign year_int = b.year | default: 0 | plus: 0 -%}
-        {%- assign inv_year = 9999 | minus: year_int -%}
         {%- assign url = b.url | default: "" -%}
         {%- assign company = b.company -%}
         {%- assign company_lc = company | downcase -%}
         {%- assign last_lc = p.last_name | downcase -%}
-        {%- capture rows_raw -%}{{ rows_raw }}{{ company_lc }}|{{ inv_year }}|{{ last_lc }}|{{ company }}|{{ url }}|{{ p.name }}|{{ p.slug }}|{{ year_int }}
+        {%- capture rows_raw -%}{{ rows_raw }}{{ company_lc }}|{{ year_int }}|{{ last_lc }}|{{ company }}|{{ url }}|{{ p.name }}|{{ p.slug }}|{{ year_int }}
 {% endcapture -%}
       {%- endif -%}
     {%- endfor -%}
@@ -42,7 +41,7 @@ last_name_lc breaks ties when two pledgees backed in the same year.
 
 {%- comment -%}
 Build unique-company list. parts[0]=company_lc, parts[3]=company, parts[4]=url.
-Captures the first occurrence (which after sort is the newest year).
+Captures the first occurrence (which after sort is the oldest year).
 {%- endcomment -%}
 {%- assign seen_keys = "" -%}
 {%- assign companies_raw = "" -%}
