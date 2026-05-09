@@ -6,11 +6,12 @@ slug: tapan-kataria
 city: West Bloomfield
 year_joined: 2021
 portrait_source: tapan-kataria-source.jpeg
-portrait_face_y: 0.21
-portrait_scale: 0.68
+portrait_face_y: 0.28
+portrait_scale: 0.60
 portrait: /assets/images/pledgees/tapan-kataria-halftone.png
 og_image: /assets/images/pledgees/tapan-kataria-og.png
 linkedin: https://www.linkedin.com/in/tapankataria/
+quote: "Michigan is different. Midwestern grit meets genuine community."
 backed:
   - year: 2025
     company: "Loretta"
