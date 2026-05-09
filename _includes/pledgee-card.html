@@ -20,7 +20,7 @@ Parameters:
         <span class="card-year">&rsquo;{{ yr_short }}</span>
       </header>
       <figure class="card-photo">
-        <img src="{{ p.portrait | relative_url }}" alt="{{ p.name }}" loading="lazy">
+        <img src="{{ p.portrait | relative_url }}" alt="{{ p.name }}" loading="lazy"{%- if p.portrait_card_x %} style="object-position: {{ p.portrait_card_x | times: 100 }}% 50%"{% endif %}>
       </figure>
       {%- assign name_parts = p.name | split: " " -%}
       <footer class="card-band">
