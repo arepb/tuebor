@@ -12,6 +12,7 @@ portrait: /assets/images/pledgees/josh-berg-halftone.png
 og_image: /assets/images/pledgees/josh-berg-og.png
 linkedin: https://www.linkedin.com/in/josh-berg-40414a7
 quote: "We live in the very best state in the Union."
+description: "Josh Berg is a Bloomfield Hills investor and Tuebor pledgee backing Michigan companies since 2023. We live in the very best state in the Union."
 backed:
   - year: 2026
     company: "Mongers Provisions"

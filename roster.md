@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Roster
-description: The people who have taken the Tuebor pledge — Michigan investors backing Michigan companies, one every year.
+description: "The people who have taken the Tuebor pledge. Michigan investors committing to back at least one Michigan company every year — publicly, on the record."
 eyebrow: 04 / Roster
 display_title: Roster.
 permalink: /roster/

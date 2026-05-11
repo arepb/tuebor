@@ -11,6 +11,7 @@ portrait_scale: 0.80
 portrait: /assets/images/pledgees/will-foss-halftone.png
 og_image: /assets/images/pledgees/will-foss-og.png
 linkedin: https://www.linkedin.com/in/will-foss-b60ba7
+description: "Will Foss is an Ann Arbor-based investor who took the Tuebor pledge in 2024. Michigan is my adopted home — the place where bits move atoms."
 backed:
   - year: 2025
     company: "Derq"
