@@ -1,6 +1,7 @@
 ---
 layout: home
 title: Home
+description: "Tuebor is an honor pledge to back at least one Michigan company per year, every year. No fees, no paperwork — just a commitment from people who love Michigan."
 permalink: /
 sitemap:
   changefreq: weekly
@@ -83,7 +84,7 @@ sitemap:
     <div class="step">
       <div class="step-num">Step 02</div>
       <h3>Do it again next year.</h3>
-      <p>Then tell the world. <a href="/howto/makepublic.html">List Tuebor on your LinkedIn</a> and join the pledge publicly.</p>
+      <p>Then tell the world. <a href="/howto/makepublic">List Tuebor on your LinkedIn</a> and join the pledge publicly.</p>
     </div>
   </div>
 </section>

@@ -15,6 +15,7 @@ email_user: reilly
 founder: true
 roster_order: 1
 quote: "Michigan is my home and also a big part of my identity."
+description: "Reilly Brennan, Tuebor co-founder, backs a Michigan company every year since 2017. Michigan is my home and also a big part of my identity."
 backed:
   - year: 2026
     company: "Moksa"

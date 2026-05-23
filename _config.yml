@@ -11,7 +11,10 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - README.md
+  - BRAND.md
+  - CLAUDE.md
   - index-test.md
+  - qa-screenshots
   - vendor
   - _sass
   - _includes/components

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Origin
-description: Tuebor is the word on Michigan's state flag. The Tuebor pledge was started in 2023 by investors Reilly Brennan and Chris Thomas as a call to arms for Michigan investors backing Michigan founders.
+description: "Tuebor: the word on Michigan's state flag, meaning 'I will defend.' The Michigan investment pledge, founded in 2023 by Reilly Brennan and Chris Thomas."
 eyebrow: 02 / Origin
 display_title: Origin.
 permalink: /origin.html

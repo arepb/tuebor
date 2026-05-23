@@ -15,6 +15,7 @@ email_user: chris
 founder: true
 roster_order: 2
 quote: "Acta Non Verba."
+description: "Tuebor co-founder Chris Thomas is a Detroit-based investor committed to backing Michigan founders every year. Acta Non Verba — the pledge that proves it."
 backed:
   - year: 2025
     company: "Michigander Coffee Co."
@@ -74,7 +75,7 @@ backed:
     public: true
   - year: 2015
     company: "Slope"
-    url: "http://goslope.com/"
+    url: "https://goslope.com/"
     public: true
   - year: 2014
     company: "Benzinga"

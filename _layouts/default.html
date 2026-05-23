@@ -221,7 +221,7 @@
   </header>
 
   <main class="{% if page.url == '/' %}home{% else %}page{% endif %}">
-    {% if page.url != '/' and page.title and page.collection != 'pledgees' %}
+    {% if page.url != '/' and page.title and page.collection != 'pledgees' and page.no_hero != true %}
       <section class="page-hero">
         <p class="eyebrow">{{ page.eyebrow | default: page.title }}</p>
         <h1>{{ page.display_title | default: page.title }}</h1>
